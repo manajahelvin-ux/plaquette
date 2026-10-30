@@ -3,7 +3,7 @@
 ## Rapport de production et d'audit
 
 **Document source :** `Plaquette HelloLead.pdf` — 9 pages, 1440 × 810 pt (20 × 11,25 in), paysage.
-**Document livré :** `Plaquette HelloLead - Assurance.pdf` — 9 pages, même format, mêmes polices, même mise en page.
+**Document livré :** `Plaquette HelloLead - Assurance V3.pdf` — 9 pages, même format, mêmes polices, même mise en page (page 3 revue, voir § 7 ; version précédente : `Plaquette HelloLead - Assurance V2 (1).pdf`).
 **Fichier de travail :** `Plaquette HelloLead - Assurance (modifiable).pptx` — 9 diapositives au format du PDF, visuels figés en image de fond, texte des blocs remplacés éditable.
 
 ---
@@ -214,3 +214,41 @@ Méthode : rendu comparatif à 110, 120, 150, 180 et 600 dpi ; extraction des sp
 **6.7 Coquille de l'original conservée.** Le libellé « Auto-entrepeneur / micro-entrepreneur » (p6) comporte la même faute que l'original ; conformément à la consigne « ne rien corriger spontanément », il n'a pas été rectifié.
 
 **6.8 Version PowerPoint.** Un fond par diapositive (rendu 180 dpi de la plaquette, textes des deux blocs retirés) et, par-dessus, une zone de texte **par ligne**, placée sur la ligne de base d'origine (largeur 320 pt, interligne 19,5 pt) : le texte reste donc éditable sans rien déplacer. Les zones sont en police « Poppins » (12,5 pt, équivalent optique du 12,98 pt composé) ; si elle n'est pas installée sur le poste, il faut l'installer pour retrouver le rendu exact, sinon PowerPoint substituera une police et les lignes pourront se décaler. Conséquence : en modifiant la longueur d'une ligne, il faut réajuster les lignes voisines. Le PDF reste le document de référence.
+
+---
+
+## 7. Corrections apportées à la page 3 — version V3
+
+Demande : « Page 3, les deux espaces encadrés (cartes SMS – RCS) sont à revoir. »
+
+### 7.1 Constat sur la V2
+
+| # | Défaut | Cause |
+|---|---|---|
+| 1 | Bandes grises et morceaux de carte autour de la 1re carte | les nouveaux visuels (226 × 255 pt) étaient plus petits que les cartes d'origine (248 × 299 pt) : l'ancien visuel dépassait tout autour |
+| 2 | Grande zone blanche vide sous le texte des deux cartes | contenu calé en haut de la carte, bouton rejeté en bas sans répartition |
+| 3 | Texte de description coupé par le chevron (« Comparez des› », « recevez des› ») | largeur de composition non réduite de la place du chevron |
+| 4 | Bouton « Ça m'intéresse ! » de la 1re carte tronqué | bouton hors du cadre de la carte |
+| 5 | Bouton « Obtenir une offre ! » de la 2e carte coupé à droite et traversé par la flèche bleue | bouton à 2 pt du bord, lui-même recouvert par la page de destination ; flèche dessinée après les cartes |
+| 6 | Aperçu de « carte suivante » visible sous la 2e carte | bas de l'ancien visuel non recouvert |
+| 7 | Titre « Des campagnes immersives et personnalisées » collé au panneau de droite | titre recomposé 3,3 % plus large que l'original (1047 pt au lieu de 1014 pt) |
+
+### 7.2 Corrections
+
+- Les deux cartes sont régénérées sous forme de visuels opaques, **posés exactement sur la géométrie d'origine** (516,86–765,11 × 140,58–439,82 et 520,65–761,40 × 441,18–740,42) : elles recouvrent intégralement les anciennes, d'où la disparition des bandes, des aperçus de carte et des bords découpés.
+- Mise en page intérieure revue d'après les proportions des cartes de l'original : photo en haut (≈ 40 %), titre en gras 17,8 pt (2 lignes), texte courant 12,5 pt composé sur une colonne plus étroite que le chevron (plus aucun chevauchement), bouton d'action pleine largeur calé en bas avec 20 pt de marge.
+- Les deux boutons sont conservés à l'identique (« Ça m'intéresse ! » en bleu, « Obtenir une offre ! » en noir) mais rentrés de 12 pt par rapport au bord : ils restent entièrement visibles, y compris la partie recouverte par la page de destination.
+- La flèche « lien du RCS vers landing page » est redessinée **sous** les cartes : elle ne traverse plus le bouton de la 2e carte (elle sort de dessous la carte, comme dans l'original).
+- Les deux cartes ont désormais la même hauteur (299,24 pt) : la 2e carte remonte de 8,3 pt, ce qui équilibre les marges du panneau et supprime le vide en bas de carte.
+- Le titre « Des campagnes immersives et personnalisées » est ramené à sa largeur d'origine (1014 pt) par mise à l'échelle horizontale ; plus aucun contact avec le panneau de droite.
+
+### 7.3 Contrôles
+
+- Comparaison pixel à pixel V3 / V2 sur les 9 pages : pages 1, 2 et 4 à 9 **identiques** (écart maximal = 0) ; seules les zones « cartes RCS » et « titre du panneau central » de la page 3 changent.
+- Colonne de gauche, panneau « Modération & Enrichissement », fiche acheteur, page de destination, flèches et cartes de fond : inchangés.
+- Aucun contenu nouveau : les textes des cartes sont ceux de la V2 ; seuls la mise en page, la taille et la position changent.
+- Diapositive 3 du PPTX régénérée à partir de la V3 (fond 180 dpi sans les textes du panneau, zones de texte « prévoyance / kiné » repositionnées comme dans le PDF).
+
+### 7.4 Point signalé, non corrigé
+
+La couche texte de la V2 conserve, sous les nouveaux contenus, les textes de la version précédente (page 3 : « Equipement actuel de l'acheteur », « LES SERRES FLEURIES »…). Ces textes sont **invisibles** (recouverts par les aplats et les visuels) mais restent extractibles par copier-coller ou par un lecteur d'écran. Le nettoyage demanderait de réécrire la couche texte de la page d'origine : à faire si un PDF accessible est exigé.
