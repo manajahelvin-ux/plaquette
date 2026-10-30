@@ -1,0 +1,4 @@
+# artefacts de fabrication (régénérés par les scripts de work/)
+work/assets/
+__pycache__/
+*.pyc
