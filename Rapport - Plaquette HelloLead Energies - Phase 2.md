@@ -11,7 +11,8 @@
 - Pages 1, 2, 8, 9 : **identiques** à la V3 (écart pixel = 0).
 - Pages 3 à 7 : seuls les éléments autorisés ont été remplacés — visuel, formulaire, bloc « Modération & Enrichissement », fiche acheteur. Titres, puces, pictos, marques, légendes, pieds de page et panneaux sont conservés.
 - Audit pixel à 72 dpi : les différences des pages 4 à 7 sont confinées aux zones visuelles et aux blocs de droite. Le panneau de gauche et les titres n'ont pas bougé.
-- Aucun texte résiduel de l'ancien secteur (assurance agricole, IARD, prévoyance, etc.) dans le PDF final. Le mot « ré-assurance » reste dans le titre de la page 4, qui est conservé.
+- Aucun texte résiduel de l'ancien secteur (assurance agricole, IARD, prévoyance, etc.) dans le PDF final.
+- Le titre de la page 4, d'abord conservé (« LP : Visuels et messages de ré-assurance »), a été corrigé : il devient « LP : Visuels et messages de capture », en accord avec la page de destination et son formulaire (voir § 6).
 
 ## 2. Ce qui a changé, page par page
 
@@ -24,6 +25,23 @@
 | 7 Emailing | E-mail principal, e-mail secondaire, bandeau, 2 mini-formulaires | Énergie, type de site | 13 lignes | 11 lignes, Tél./Mail masqués |
 
 Fiches acheteur fictives : entreprises, SIRET, adresses et contacts inventés. Aucune donnée réelle.
+
+## 2 bis. Correction du titre de la page 4
+
+Le titre de la page 4 venait de la version Assurance : « LP : Visuels et messages de
+ré-assurance ». Le mot « ré-assurance » appartient au vocabulaire de l'assurance et ne décrit pas
+la page, qui est une page de destination dont le formulaire capte le lead.
+
+| | Texte | Largeur (OpenSans 25 pt) |
+| --- | --- | --- |
+| Avant | LP : Visuels et messages de ré-assurance | 471,9 pt |
+| Après | LP : Visuels et messages de capture | 410,7 pt |
+
+Le titre est réécrit à l'origine exacte (479,1 / 58,7 pt), dans le même corps, la même couleur et
+la même police (OpenSans-Regular, sous-ensemble embarqué dans la V3), après retrait du texte
+d'origine du flux — pas de simple recouvrement. Aucune autre zone de la page ne bouge : le diff
+pixel entre les deux versions ne montre que le titre (x 576 → 949 pt, y 40 → 65 pt sur les
+9 pages). La diapositive 4 du PPTX est régénérée à partir du PDF corrigé.
 
 ## 3. Choix et points à valider
 
