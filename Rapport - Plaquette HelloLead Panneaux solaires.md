@@ -107,6 +107,8 @@ Trois e-mails et deux étapes de formulaire :
   chevauchement, aucune bande résiduelle).
 - Vérification que chaque ligne du panneau tient dans sa largeur d'origine (auto-ajustement de
   la taille de police, jamais en dessous de 11 pt).
+- Le texte d'origine des panneaux est **retiré du flux** (et non simplement recouvert) : un
+  copier-coller ou une extraction depuis le PDF ne renvoie que les textes solaires.
 
 ## 9. Livrables
 

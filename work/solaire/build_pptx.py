@@ -10,8 +10,8 @@ Principe (identique à la version Assurance) :
     telles quelles depuis le fichier PowerPoint d'origine.
 """
 import io
+import json
 import os
-import shutil
 
 import pymupdf
 from pptx import Presentation
@@ -21,6 +21,7 @@ from pptx.enum.text import MSO_ANCHOR
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PDF = os.path.join(RACINE, "Plaquette HelloLead - Panneaux solaires.pdf")
+LIGNES_JSON = os.path.join(RACINE, "work", "solaire", "assets", "lignes_panneau.json")
 FOND = os.path.join(RACINE, "work", "solaire", "fond_sans_texte.pdf")
 MODELE = os.path.join(RACINE, "Plaquette HelloLead - Assurance (modifiable).pptx")
 SORTIE = os.path.join(RACINE, "Plaquette HelloLead - Panneaux solaires (modifiable).pptx")
@@ -32,17 +33,14 @@ MARGE_HAUT = 3.12          # décalage constaté entre haut de span et haut de b
 EMU = 12700                # 1 pt
 
 
-def lignes_panneau(page):
-    """(x, y_baseline, texte, gras) des lignes du panneau, dans l'ordre du flux."""
-    out = []
-    for b in page.get_text("dict")["blocks"]:
-        for l in b.get("lines", []):
-            for s in l["spans"]:
-                if s["bbox"][0] < 1080 or not s["text"].strip():
-                    continue
-                gras = "Bold" in s["font"] or "Semibold" in s["font"]
-                out.append((s["origin"][0], s["bbox"][1], s["text"], gras))
-    return out
+def lignes_panneau(n):
+    """(x, haut de ligne, texte, gras) des lignes du panneau de la page n.
+
+    La liste est écrite par build_pdf.py : la lire dans le PDF serait ambigu,
+    l'ancien texte (masqué par le fond du panneau) restant présent dans le flux.
+    """
+    return [(d["x"], d["haut"], d["texte"], d["gras"])
+            for d in LIGNES if d["page"] == n]
 
 
 def vider(slide):
@@ -54,8 +52,11 @@ def main():
     doc = pymupdf.open(PDF)
     fond = pymupdf.open(FOND)
     prs = Presentation(MODELE)
+    lignes = json.load(open(LIGNES_JSON))
     largeur, hauteur = prs.slide_width, prs.slide_height
 
+    global LIGNES
+    LIGNES = lignes
     for n in PAGES:
         slide = prs.slides[n - 1]
         vider(slide)
@@ -65,7 +66,7 @@ def main():
         pic = slide.shapes.add_picture(img, 0, 0, width=largeur, height=hauteur)
         pic.name = "fond_p%d" % n
 
-        for i, (x, haut, texte, gras) in enumerate(lignes_panneau(doc[n - 1])):
+        for i, (x, haut, texte, gras) in enumerate(lignes_panneau(n)):
             tb = slide.shapes.add_textbox(Emu(int(x * EMU)),
                                           Emu(int((haut - MARGE_HAUT) * EMU)),
                                           Emu(400 * EMU), Emu(19.5 * EMU))
@@ -82,7 +83,7 @@ def main():
             run.font.bold = gras
             run.font.name = "Poppins"
             run.font.color.rgb = BLEU if gras else NOIR
-        print("page %d : %d zones de texte" % (n, len(lignes_panneau(doc[n - 1]))))
+        print("page %d : %d zones de texte" % (n, len(lignes_panneau(n))))
 
     prs.save(SORTIE)
     print("écrit :", SORTIE)

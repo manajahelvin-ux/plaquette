@@ -61,7 +61,10 @@ def poser_png(page, chemin, rect, clip_x=None):
     page.insert_image(rect, stream=buf.getvalue(), keep_proportion=False)
 
 
-def panneau_lateral(page, pno):
+LIGNES_PANNEAU = []
+
+
+def panneau_lateral(page, pno, ecrire=True):
     """Réécrit le bloc « Modération & Enrichissement » et la fiche acheteur.
 
     Les lignes sont posées sur les lignes de base d'origine : même rythme, même
@@ -86,6 +89,12 @@ def panneau_lateral(page, pno):
     x1 = cadre.x1 - 10
     y0 = spans[0]["bbox"][1] - 4
     y1 = spans[-1]["bbox"][3] + 4
+    # l'ancien texte est retiré du flux (pas seulement masqué) : il ne doit pas
+    # réapparaître au copier-coller ni à l'extraction
+    page.add_redact_annot(pymupdf.Rect(x0, y0, x1, y1))
+    page.apply_redactions(images=pymupdf.PDF_REDACT_IMAGE_NONE,
+                          graphics=pymupdf.PDF_REDACT_LINE_ART_NONE,
+                          text=pymupdf.PDF_REDACT_TEXT_REMOVE)
     page.draw_rect(pymupdf.Rect(x0, y0, x1, y1), color=None, fill=PANEL)
 
     page.insert_font(fontname="popR", fontfile=REG)
@@ -100,9 +109,13 @@ def panneau_lateral(page, pno):
         assert largeur <= limite, "page %d : ligne trop large (%.1f > %.1f) %r" % (
             pno, largeur, limite, texte)
     for (texte, gras), s in zip(textes, spans):
-        page.insert_text((s["origin"][0], s["origin"][1]), texte,
-                         fontname="popB" if gras else "popR", fontsize=13.0,
-                         color=_c(BLEU) if gras else (0, 0, 0))
+        if ecrire:
+            page.insert_text((s["origin"][0], s["origin"][1]), texte,
+                             fontname="popB" if gras else "popR", fontsize=13.0,
+                             color=_c(BLEU) if gras else (0, 0, 0))
+        LIGNES_PANNEAU.append(dict(page=pno, x=round(s["origin"][0], 2),
+                                   haut=round(s["bbox"][1], 2), texte=texte,
+                                   gras=bool(gras)))
 
     # masques gris de la fiche (Contact / Tél / Mail)
     for dr in page.get_drawings():
@@ -160,8 +173,7 @@ def page3(doc):
     v.poser()
     v.enregistrer(os.path.join(ASSETS, "apercu_landing.png"))
 
-    if not SANS_TEXTE:
-        panneau_lateral(page, 3)
+    panneau_lateral(page, 3, ecrire=not SANS_TEXTE)
     return page
 
 
@@ -174,6 +186,10 @@ def main():
     page7(doc)
     doc.save(SORTIE_FOND if SANS_TEXTE else SORTIE, garbage=0, deflate=True)
     doc.close()
+    if not SANS_TEXTE:
+        import json
+        with open(os.path.join(ASSETS, "lignes_panneau.json"), "w") as fh:
+            json.dump(LIGNES_PANNEAU, fh, ensure_ascii=False, indent=1)
     print("écrit :", SORTIE_FOND if SANS_TEXTE else SORTIE)
 
 
@@ -239,8 +255,7 @@ def page5(doc):
     f.poser()
     f.enregistrer(os.path.join(ASSETS, "apercu_form.png"))
 
-    if not SANS_TEXTE:
-        panneau_lateral(page, 5)
+    panneau_lateral(page, 5, ecrire=not SANS_TEXTE)
     return page
 
 
@@ -337,8 +352,7 @@ def page6(doc):
 
     v.poser()
     v.enregistrer(os.path.join(ASSETS, "apercu_crm.png"))
-    if not SANS_TEXTE:
-        panneau_lateral(page, 6)
+    panneau_lateral(page, 6, ecrire=not SANS_TEXTE)
     return page
 
 
@@ -490,8 +504,7 @@ def page7(doc):
         r.poser()
         r.enregistrer(os.path.join(ASSETS, "apercu_etape%d.png" % xref))
 
-    if not SANS_TEXTE:
-        panneau_lateral(page, 7)
+    panneau_lateral(page, 7, ecrire=not SANS_TEXTE)
     return page
 
 
