@@ -1,0 +1,1044 @@
+{
+ "3": [
+  {
+   "txt": "Type de couverture recherchée :",
+   "origin": [
+    1098.9,
+    265.35
+   ],
+   "x1": 1305.26,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Complémentaire santé individuelle",
+   "origin": [
+    1098.9,
+    284.85
+   ],
+   "x1": 1318.31,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Situation de l'acheteur :",
+   "origin": [
+    1098.9,
+    304.35
+   ],
+   "x1": 1250.07,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Salarié(e) du secteur privé",
+   "origin": [
+    1098.9,
+    323.85
+   ],
+   "x1": 1264.85,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Personnes à couvrir :",
+   "origin": [
+    1098.9,
+    343.35
+   ],
+   "x1": 1232.2,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "2 personnes (couple) et 1 enfant de moins",
+   "origin": [
+    1098.9,
+    362.85
+   ],
+   "x1": 1360.85,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "de 18 ans",
+   "origin": [
+    1098.9,
+    382.35
+   ],
+   "x1": 1156.56,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Âge de l'assuré principal :",
+   "origin": [
+    1098.9,
+    401.85
+   ],
+   "x1": 1262.67,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "35 à 44 ans",
+   "origin": [
+    1098.9,
+    421.35
+   ],
+   "x1": 1171.19,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Recherchez-vous une garantie optique et",
+   "origin": [
+    1098.9,
+    440.85
+   ],
+   "x1": 1365.17,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "dentaire ?",
+   "origin": [
+    1098.9,
+    460.35
+   ],
+   "x1": 1163.09,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Oui",
+   "origin": [
+    1098.9,
+    479.85
+   ],
+   "x1": 1119.78,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Budget mensuel envisagé :",
+   "origin": [
+    1098.9,
+    499.35
+   ],
+   "x1": 1272.0,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "40 € à 59 € par mois",
+   "origin": [
+    1098.9,
+    518.85
+   ],
+   "x1": 1230.97,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Échéance du projet :",
+   "origin": [
+    1098.9,
+    538.35
+   ],
+   "x1": 1228.0,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Sous 3 mois",
+   "origin": [
+    1098.9,
+    557.85
+   ],
+   "x1": 1173.2,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Entreprise : ATELIER DUVERGER",
+   "origin": [
+    1098.9,
+    599.25
+   ],
+   "x1": 1280.71,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Siret : 81234567800019",
+   "origin": [
+    1098.9,
+    618.75
+   ],
+   "x1": 1235.7,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Activité : (Ingénierie, études techniques et",
+   "origin": [
+    1098.9,
+    638.25
+   ],
+   "x1": 1358.71,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "conseil aux entreprises)",
+   "origin": [
+    1098.9,
+    657.75
+   ],
+   "x1": 1247.21,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Contact :",
+   "origin": [
+    1098.9,
+    677.25
+   ],
+   "x1": 1155.64,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Adresse : 9 rue des Lilas",
+   "origin": [
+    1098.9,
+    696.75
+   ],
+   "x1": 1245.64,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Ville : Nantes",
+   "origin": [
+    1098.9,
+    716.25
+   ],
+   "x1": 1177.62,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Code Postal : 44000",
+   "origin": [
+    1098.9,
+    735.75
+   ],
+   "x1": 1222.39,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Tél :",
+   "origin": [
+    1098.9,
+    755.25
+   ],
+   "x1": 1122.46,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Mail :",
+   "origin": [
+    1098.9,
+    774.75
+   ],
+   "x1": 1130.23,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  }
+ ],
+ "5": [
+  {
+   "txt": "Quel type de contrat recherchez-vous ?",
+   "origin": [
+    1091.2,
+    280.45
+   ],
+   "x1": 1344.18,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Multirisque professionnelle",
+   "origin": [
+    1091.2,
+    299.95
+   ],
+   "x1": 1257.01,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Vous envisagez cette assurance à titre :",
+   "origin": [
+    1091.2,
+    319.45
+   ],
+   "x1": 1345.14,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "professionnel",
+   "origin": [
+    1091.2,
+    338.95
+   ],
+   "x1": 1175.01,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Secteur d'activité de l'entreprise :",
+   "origin": [
+    1091.2,
+    358.45
+   ],
+   "x1": 1303.99,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Bâtiment et travaux publics",
+   "origin": [
+    1091.2,
+    377.95
+   ],
+   "x1": 1262.51,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Chiffre d'affaires annuel :",
+   "origin": [
+    1091.2,
+    397.45
+   ],
+   "x1": 1252.26,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "500 000 € à 1 M€",
+   "origin": [
+    1091.2,
+    416.95
+   ],
+   "x1": 1198.35,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Sous quel délai souhaitez-vous être",
+   "origin": [
+    1091.2,
+    436.45
+   ],
+   "x1": 1320.1,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "couvert ?",
+   "origin": [
+    1091.2,
+    455.95
+   ],
+   "x1": 1150.39,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Immédiat",
+   "origin": [
+    1091.2,
+    475.45
+   ],
+   "x1": 1152.23,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Nombre de salariés à assurer :",
+   "origin": [
+    1091.2,
+    494.95
+   ],
+   "x1": 1285.2,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "10 à 19",
+   "origin": [
+    1091.2,
+    514.45
+   ],
+   "x1": 1130.01,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Entreprise : MENUISERIE KLAAS",
+   "origin": [
+    1091.2,
+    564.85
+   ],
+   "x1": 1270.86,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Siret : 81234567800027",
+   "origin": [
+    1091.2,
+    584.35
+   ],
+   "x1": 1230.12,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Activité : (Travaux de menuiserie bois et",
+   "origin": [
+    1091.2,
+    603.85
+   ],
+   "x1": 1338.64,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "PVC)",
+   "origin": [
+    1091.2,
+    623.35
+   ],
+   "x1": 1122.18,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Contact :",
+   "origin": [
+    1091.2,
+    642.85
+   ],
+   "x1": 1147.94,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Adresse : 8 rue des Chênes",
+   "origin": [
+    1091.2,
+    662.35
+   ],
+   "x1": 1259.08,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Ville : Vichy",
+   "origin": [
+    1091.2,
+    681.85
+   ],
+   "x1": 1160.05,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Code Postal : 03 200",
+   "origin": [
+    1091.2,
+    701.35
+   ],
+   "x1": 1216.86,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Tél :",
+   "origin": [
+    1091.2,
+    720.85
+   ],
+   "x1": 1114.76,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Mail :",
+   "origin": [
+    1091.2,
+    740.35
+   ],
+   "x1": 1122.53,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  }
+ ],
+ "6": [
+  {
+   "txt": "Contrat(s) d'assurance pour le(s)quel(s)",
+   "origin": [
+    1082.2,
+    349.75
+   ],
+   "x1": 1345.99,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "l'acheteur souhaite recevoir des offres :",
+   "origin": [
+    1082.2,
+    369.25
+   ],
+   "x1": 1333.87,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Assurance prévoyance collective",
+   "origin": [
+    1082.2,
+    388.75
+   ],
+   "x1": 1288.71,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Effectif de la société :",
+   "origin": [
+    1082.2,
+    408.25
+   ],
+   "x1": 1215.47,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "50 à 99",
+   "origin": [
+    1082.2,
+    427.75
+   ],
+   "x1": 1128.72,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Auto-entrepeneur / micro-entrepreneur :",
+   "origin": [
+    1082.2,
+    447.25
+   ],
+   "x1": 1347.99,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Non",
+   "origin": [
+    1082.2,
+    466.75
+   ],
+   "x1": 1106.97,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Disponibilité de l'acheteur pour un appel :",
+   "origin": [
+    1082.2,
+    486.25
+   ],
+   "x1": 1347.23,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "le matin",
+   "origin": [
+    1082.2,
+    505.75
+   ],
+   "x1": 1133.26,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Avez-vous une heure de préférence (HH:MM) :",
+   "origin": [
+    1082.2,
+    525.25
+   ],
+   "x1": 1376.12,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "11:00",
+   "origin": [
+    1082.2,
+    544.75
+   ],
+   "x1": 1108.54,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Entreprise : BATIPRO SERVICES",
+   "origin": [
+    1082.2,
+    601.15
+   ],
+   "x1": 1263.36,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Siret : 81234567800035",
+   "origin": [
+    1082.2,
+    620.65
+   ],
+   "x1": 1222.33,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Activité : (Travaux de maçonnerie générale et",
+   "origin": [
+    1082.2,
+    640.15
+   ],
+   "x1": 1366.14,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "gros œuvre de bâtiment)",
+   "origin": [
+    1082.2,
+    659.65
+   ],
+   "x1": 1240.17,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Contact :",
+   "origin": [
+    1082.2,
+    679.15
+   ],
+   "x1": 1138.94,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Adresse : 584 chemin des Vignes",
+   "origin": [
+    1082.2,
+    698.65
+   ],
+   "x1": 1287.21,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Ville : Toulon",
+   "origin": [
+    1082.2,
+    718.15
+   ],
+   "x1": 1158.74,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Code Postal : 83200",
+   "origin": [
+    1082.2,
+    737.65
+   ],
+   "x1": 1204.56,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Tél :",
+   "origin": [
+    1082.2,
+    757.15
+   ],
+   "x1": 1105.76,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Mail :",
+   "origin": [
+    1082.2,
+    776.65
+   ],
+   "x1": 1113.53,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  }
+ ],
+ "7": [
+  {
+   "txt": "Êtes-vous déjà accompagné par un conseiller",
+   "origin": [
+    1081.9,
+    307.85
+   ],
+   "x1": 1376.39,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "en gestion de patrimoine ?",
+   "origin": [
+    1081.9,
+    327.35
+   ],
+   "x1": 1251.72,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Non",
+   "origin": [
+    1081.9,
+    346.85
+   ],
+   "x1": 1106.67,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Nombre de contrats d'épargne existants :",
+   "origin": [
+    1081.9,
+    366.35
+   ],
+   "x1": 1347.22,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "2 contrats",
+   "origin": [
+    1081.9,
+    385.85
+   ],
+   "x1": 1144.67,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Quel montant souhaitez-vous placer ?",
+   "origin": [
+    1081.9,
+    405.35
+   ],
+   "x1": 1327.9,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "50 000 € à 99 999 €",
+   "origin": [
+    1081.9,
+    424.85
+   ],
+   "x1": 1209.13,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Vous souhaitez étudier des solutions pour :",
+   "origin": [
+    1081.9,
+    444.35
+   ],
+   "x1": 1355.41,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Une assurance-vie et un PER",
+   "origin": [
+    1081.9,
+    463.85
+   ],
+   "x1": 1259.44,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Échéance du projet :",
+   "origin": [
+    1081.9,
+    483.35
+   ],
+   "x1": 1211.0,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Sous 3 mois",
+   "origin": [
+    1081.9,
+    502.85
+   ],
+   "x1": 1156.2,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Objectif principal :",
+   "origin": [
+    1081.9,
+    522.35
+   ],
+   "x1": 1198.98,
+   "bold": true,
+   "color": "0a5bff",
+   "size": 12.98
+  },
+  {
+   "txt": "Préparer la retraite",
+   "origin": [
+    1081.9,
+    541.85
+   ],
+   "x1": 1199.03,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Entreprise : HD PATRIMOINE",
+   "origin": [
+    1081.9,
+    578.45
+   ],
+   "x1": 1245.66,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Siret : 81234567800043",
+   "origin": [
+    1081.9,
+    597.95
+   ],
+   "x1": 1222.05,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Activité : (Activités des sièges sociaux et",
+   "origin": [
+    1081.9,
+    617.45
+   ],
+   "x1": 1331.22,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "conseil en gestion de patrimoine, conseil",
+   "origin": [
+    1081.9,
+    636.95
+   ],
+   "x1": 1335.98,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "fiscal)",
+   "origin": [
+    1081.9,
+    656.45
+   ],
+   "x1": 1120.35,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Contact :",
+   "origin": [
+    1081.9,
+    675.95
+   ],
+   "x1": 1138.64,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Adresse : 114 rue de Flandre",
+   "origin": [
+    1081.9,
+    695.45
+   ],
+   "x1": 1250.28,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Ville : Paris",
+   "origin": [
+    1081.9,
+    714.95
+   ],
+   "x1": 1146.54,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Code Postal : 75019",
+   "origin": [
+    1081.9,
+    734.45
+   ],
+   "x1": 1200.52,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Tél :",
+   "origin": [
+    1081.9,
+    753.95
+   ],
+   "x1": 1105.46,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  },
+  {
+   "txt": "Mail :",
+   "origin": [
+    1081.9,
+    773.45
+   ],
+   "x1": 1113.23,
+   "bold": false,
+   "color": "000000",
+   "size": 12.98
+  }
+ ]
+}
