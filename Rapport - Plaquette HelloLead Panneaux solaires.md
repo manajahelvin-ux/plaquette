@@ -23,7 +23,8 @@ les textes sectoriels ont été rédigés à partir des intitulés de champs de 
 
 - Trame de 9 pages conservée à l'identique : p1, p2, p4, p8 et p9 sont **pixel pour pixel**
   identiques à l'original (écart maximal mesuré : 0 sur les zones non retouchées).
-- Pages sectorielles : p3 (SMS – RCS), p5 (META Ads), p6 (CALL), p7 (Emailing).
+- Pages sectorielles : p3 (SMS – RCS), p4 (SEA – GPT Ads), p5 (META Ads), p6 (CALL),
+  p7 (Emailing).
 - Sur chacune de ces pages, **seules quatre rubriques changent** : le visuel, le formulaire /
   la page de destination, le bloc « Modération & Enrichissement » et la fiche acheteur.
 - Titres, sous-titres, puces, pictogrammes, flèches, marques (ComparateurPro, hellodevis),
@@ -38,6 +39,7 @@ les textes sectoriels ont été rédigés à partir des intitulés de champs de 
 | Page | Support | Segment solaire retenu |
 | --- | --- | --- |
 | 3 | SMS – RCS | installation photovoltaïque résidentielle, comparateur d'installateurs |
+| 4 | SEA – GPT Ads | page de destination professionnelle : toiture d'entreprise, autoconsommation |
 | 5 | META Ads | SOLARIS ÉNERGIE — devis panneaux solaires (particuliers et professionnels) |
 | 6 | CALL | fiche CRM d'un projet photovoltaïque B2B (toiture industrielle) |
 | 7 | Emailing | séquence installateur solaire : choix de solution, bon à savoir, comparateur |
@@ -64,6 +66,29 @@ type de bien, surface de toiture, consommation annuelle, budget, échéance.
 
 **Fiche acheteur** : SOLARIS ÉNERGIE, 81234567800027, activité installation de panneaux
 photovoltaïques, contact M. Vasseur, 12 rue des Ateliers, 44000 Nantes.
+
+## 4 bis. Page 4 — SEA · GPT Ads
+
+Page ajoutée à la déclinaison solaire (elle était restée la page « assurance agricole » de
+l'original) :
+
+| Élément | Avant | Après |
+| --- | --- | --- |
+| Photo de la page de destination | éleveur dans son tracteur | bâtiment professionnel équipé de panneaux, installateur devant |
+| Titre de la page de destination | « Assurance agricole » | « Panneaux solaires » |
+| Sous-titre | « Protégez votre activité et vos collaborateurs » | « Des offres adaptées / à votre site professionnel » |
+| Carte de formulaire | « Comparez les assurances pour votre exploitation » | « Comparez les offres pour votre projet solaire » |
+| Cases de la carte | multirisque, récoltes, flotte, RC pro, santé | photovoltaïque, ombrières, autoconsommation, chauffe-eau, bornes |
+| Bande de ré-assurance | **six logos d'assureurs réels** (Gan, Allianz, Groupama, AXA, MACIF, Hiscox) | mention neutre « Particuliers · Professionnels · Toitures et ombrières » |
+| Extrait de formulaire | « Étape 2 · Préciser la taille de l'exploitation » / effectif (0 à 1 … 50 et plus) | « Étape 2 · Préciser la surface de toiture » / 7 tranches de surface |
+| Modération & Enrichissement | contrats recherchés, effectif, échéance | type de projet solaire, surface de toiture disponible, échéance |
+| Fiche acheteur | DU PREAMBERT, céréales, Saint-Nazaire | AXSOL ENR, 84921763500014, Rennes |
+
+Les six logos d'assureurs ne pouvaient pas rester dans une plaquette solaire ; aucun logo
+d'installateur n'a été inventé, la bande porte une mention neutre. Les 12 lignes du visuel, les
+11 lignes de l'extrait de formulaire et les 18 lignes du panneau sont conservées à l'identique
+(mêmes origines, mêmes corps, mêmes couleurs) : seule la formulation change. Le panneau de la
+page 4 est en DejaVu (comme à l'origine), les autres pages en Poppins.
 
 ## 5. Page 5 — META Ads
 
@@ -125,6 +150,8 @@ leurs titres de section, leurs boutons et la mise en page de la page sont inchan
   chevauchement, aucune bande résiduelle).
 - Vérification que chaque ligne du panneau tient dans sa largeur d'origine (auto-ajustement de
   la taille de police, jamais en dessous de 11 pt).
+- Page 4 : diff pixel contre la version précédente — seules les pages 4 changent (x 482 → 1211 pt,
+  y 89 → 738 pt), colonne de gauche et titres compris dans les zones inchangées.
 - Le texte d'origine des panneaux est **retiré du flux** (et non simplement recouvert) : un
   copier-coller ou une extraction depuis le PDF ne renvoie que les textes solaires.
 

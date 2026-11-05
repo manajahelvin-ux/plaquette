@@ -115,7 +115,7 @@ def panneau_lateral(page, pno, ecrire=True):
                              color=_c(BLEU) if gras else (0, 0, 0))
         LIGNES_PANNEAU.append(dict(page=pno, x=round(s["origin"][0], 2),
                                    haut=round(s["bbox"][1], 2), texte=texte,
-                                   gras=bool(gras)))
+                                   gras=bool(gras), taille=13.0))
 
     # masques gris de la fiche (Contact / Tél / Mail)
     for dr in page.get_drawings():
@@ -181,6 +181,7 @@ def page3(doc):
 def main():
     doc = pymupdf.open(SRC)
     page3(doc)
+    page4(doc, ecrire=not SANS_TEXTE)
     page5(doc)
     page6(doc)
     page7(doc)
@@ -525,6 +526,149 @@ def page7(doc):
         r.enregistrer(os.path.join(ASSETS, "apercu_etape%d.png" % xref))
 
     panneau_lateral(page, 7, ecrire=not SANS_TEXTE)
+    return page
+
+
+# ------------------------------------------------------------------- page 4
+# DejaVu complet (les fichiers extraits du PDF n'ont plus de table de caractères)
+DJ = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+DJB = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+
+# Visuel de la page de destination (page 4) : mêmes 12 lignes, mêmes origines.
+P4_LP = [
+    "Panneaux solaires",
+    "Des offres adaptées",
+    "à votre site professionnel",
+    "Comparez les offres",
+    "pour votre projet solaire",
+    "Quels équipements recherchez-vous ?",
+    "Panneaux photovoltaïques",
+    "Ombrières et parkings",
+    "Autoconsommation et revente",
+    "Chauffe-eau solaire",
+    "Bornes de recharge",
+    "Suivant",
+]
+# Extrait de formulaire : mêmes 11 lignes.
+P4_FORM = [
+    "Extrait du formulaire",
+    "Étape 2 · Préciser la surface de toiture",
+    "Quelle est la surface de votre toiture ?",
+    "Moins de 100 m²",
+    "100 à 250 m²",
+    "250 à 500 m²",
+    "500 à 1 000 m²",
+    "1 000 à 5 000 m²",
+    "5 000 à 10 000 m²",
+    "10 000 m² et plus",
+    "Suivant",
+]
+# Bande de ré-assurance : les logos d'assureurs sont remplacés par une mention.
+P4_BANDE = "Particuliers · Professionnels · Toitures et ombrières"
+# Panneau : 18 lignes d'origine (7 modération + 11 fiche).
+P4_PANNEAU = [
+    "Type de projet solaire :",
+    "Photovoltaïque en autoconsommation",
+    "avec revente du surplus",
+    "Surface de toiture disponible :",
+    "250 à 500 m²",
+    "Échéance du projet :",
+    "Sous 3 mois",
+    "Entreprise : AXSOL ENR",
+    "Siret : 84921763500014",
+    "Activité : (Installation de panneaux",
+    "photovoltaïques en toiture et",
+    "ombrières de parking)",
+    "Contact : ",
+    "Adresse : 8 rue des Ateliers",
+    "Ville : Rennes",
+    "Code postal : 35 000",
+    "Tél : ",
+    "Mail : ",
+]
+
+
+def _spans_zone(page, zone):
+    """Spans dont l'origine tombe dans `zone`, dans l'ordre de lecture."""
+    out = []
+    for b in page.get_text("dict")["blocks"]:
+        for l in b.get("lines", []):
+            for s in l["spans"]:
+                if s["text"].strip() and zone.contains(pymupdf.Point(s["origin"])):
+                    out.append(s)
+    # ordre de lecture : colonne (x) puis ligne (y) — les textes de la carte de
+    # formulaire sont à droite de ceux de la photo, pas en dessous
+    out.sort(key=lambda s: (round(s["origin"][0]), round(s["origin"][1], 1)))
+    return out
+
+
+def _reecrire(page, zone, textes, ecrire=True):
+    """Remplace les textes de `zone` en conservant origine, corps, couleur et graisse."""
+    spans = _spans_zone(page, zone)
+    assert len(spans) == len(textes), "page 4 : %d lignes au lieu de %d" % (
+        len(spans), len(textes))
+    infos = [dict(origine=tuple(s["origin"]), taille=s["size"], couleur=s["color"],
+                  haut=s["bbox"][1], x=s["bbox"][0], gras="Bold" in s["font"])
+             for s in spans]
+    page.add_redact_annot(zone)
+    page.apply_redactions(images=pymupdf.PDF_REDACT_IMAGE_NONE,
+                          graphics=pymupdf.PDF_REDACT_LINE_ART_NONE,
+                          text=pymupdf.PDF_REDACT_TEXT_REMOVE)
+    if ecrire:
+        page.insert_font(fontname="djr4", fontfile=DJ)
+        page.insert_font(fontname="djb4", fontfile=DJB)
+        for info, texte in zip(infos, textes):
+            c = info["couleur"]
+            rgb = (((c >> 16) & 255) / 255, ((c >> 8) & 255) / 255, (c & 255) / 255)
+            page.insert_text(info["origine"], texte,
+                             fontname="djb4" if info["gras"] else "djr4",
+                             fontsize=info["taille"], color=rgb)
+    return infos
+
+
+def page4(doc, ecrire=True):
+    page = doc[3]
+
+    # 1. photo de la page de destination (même cadre, même définition)
+    im = Image.open(os.path.join(PHOTOS, "chantier_b2b.jpg")).convert("RGB")
+    # on recadre le ciel pour garder le bâtiment et l'installateur au centre
+    im = im.crop((int(im.width * 0.06), int(im.height * 0.20),
+                  int(im.width * 0.94), im.height))
+    ech = max(1419 / im.width, 942 / im.height)
+    im = im.resize((round(im.width * ech) + 1, round(im.height * ech) + 1), Image.LANCZOS)
+    gx, gy = im.width - 1419, im.height - 942
+    im = im.crop((gx // 2, round(gy * 0.45), gx // 2 + 1419, round(gy * 0.45) + 942))
+    # voile sombre en bas à gauche : le titre blanc doit rester lisible
+    voile = Image.new("L", im.size, 0)
+    dv = ImageDraw.Draw(voile)
+    for y in range(im.height):
+        t = max(0.0, (y - im.height * 0.45) / (im.height * 0.55))
+        dv.line([(0, y), (im.width, y)], fill=int(150 * t))
+    im = Image.composite(Image.new("RGB", im.size, (0, 0, 0)), im, voile)
+    buf = io.BytesIO()
+    im.save(buf, "PNG", optimize=True)
+    page.replace_image(136, stream=buf.getvalue())
+
+    # 2. bande de ré-assurance : retrait des logos d'assureurs
+    for info in page.get_image_info(xrefs=True):
+        if info["xref"] and 400 < info["bbox"][1] < 445 and 480 < info["bbox"][0] < 960:
+            page.delete_image(info["xref"])
+    page.insert_font(fontname="djb4", fontfile=DJB)
+    largeur = pymupdf.Font(fontfile=DJB).text_length(P4_BANDE, 9.0)
+    page.insert_text((719.5 - largeur / 2, 429), P4_BANDE, fontname="djb4",
+                     fontsize=9.0, color=(0.235, 0.235, 0.259))
+
+    # 3. textes de la page de destination et de l'extrait de formulaire
+    # les textes des visuels restent dans le fond (seul le panneau est éditable)
+    _reecrire(page, pymupdf.Rect(483, 85, 962, 403), P4_LP)
+    _reecrire(page, pymupdf.Rect(477, 460, 963, 760), P4_FORM)
+
+    # 4. bloc « Modération & Enrichissement » et fiche acheteur
+    infos = _reecrire(page, pymupdf.Rect(1000, 448, 1340, 790), P4_PANNEAU, ecrire)
+    for info, texte in zip(infos, P4_PANNEAU):
+        LIGNES_PANNEAU.append(dict(page=4, x=round(info["x"], 2),
+                                   haut=round(info["haut"], 2), texte=texte,
+                                   gras=info["gras"], taille=round(info["taille"], 2)))
     return page
 
 

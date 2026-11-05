@@ -16,6 +16,7 @@ l'original.
 - Segments retenus, d'après les rubriques CRM `id_rubrique=2019809` (EDF Solutions solaires) et
   `id_rubrique=2017948` (Panneaux photovoltaïques) :
   p3 = installation photovoltaïque résidentielle (comparateur d'installateurs),
+  p4 = page de destination professionnelle (toiture d'entreprise, autoconsommation),
   p5 = SOLARIS ÉNERGIE, devis panneaux solaires,
   p6 = fiche CRM d'un projet photovoltaïque B2B,
   p7 = séquence e-mailing installateur solaire.
@@ -23,9 +24,12 @@ l'original.
   de destination, bloc « Modération & Enrichissement » et fiche acheteur. Titres, puces, pictos,
   flèches, marques, légendes et cartes de fond sont inchangés ; le nombre de lignes de chaque
   bloc est identique à l'original.
-- Contrôle pixel à pixel (rendu 100 dpi) : pages 1, 2, 4, 8, 9 **identiques** (0 pixel d'écart) ;
-  pages 3, 5, 6, 7 modifiées uniquement dans les zones autorisées (visuel, formulaire, panneau de
-  modération, fiche acheteur) — les colonnes de titres et de puces de gauche ne bougent pas.
+- Contrôle pixel à pixel (rendu 100 dpi) : pages 1, 2, 8, 9 **identiques** (0 pixel d'écart) ;
+  pages 3, 4, 5, 6, 7 modifiées uniquement dans les zones autorisées (visuel, formulaire, panneau
+  de modération, fiche acheteur) — les colonnes de titres et de puces de gauche ne bougent pas.
+- Page 4 : les six logos d'assureurs de la bande de ré-assurance (Gan, Allianz, Groupama, AXA,
+  MACIF, Hiscox) sont retirés et remplacés par une mention neutre ; aucun logo d'installateur
+  n'est inventé.
 - Direction artistique solaire assumée : pavillon équipé de panneaux, toiture au crépuscule,
   installateurs sur le toit. Les visuels de la page 7 (e-mails) ont été repris pour que la page
   ne se lise plus comme une page « patrimoine » — photo d'accroche, bannière, accroche du
