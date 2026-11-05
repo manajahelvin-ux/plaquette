@@ -391,6 +391,13 @@ def page7(doc):
         e1.texte_ip(71, yt, titre, DJB, t1, T)
         t2 = e1.ajuster_ip(sous, DJ, 205, maxi=8)
         e1.texte_ip(71, ys, sous, DJ, t2, GRIS_C)
+    # accroche du bandeau sombre (deux lignes jaunes d'origine)
+    for (box, base, texte) in (
+            ((24, 528, 306, 544), 539, "Votre projet solaire chiffré en 1 minute,"),
+            ((24, 543, 306, 559), 553, "par des installateurs agréés RGE !")):
+        e1.effacer_ip(*box, couleur=SOMBRE)
+        t = e1.ajuster_ip(texte, DJ, 270, maxi=8)
+        e1.texte_ip(163, base, texte, DJ, t, JAUNE, ancre="ms")
     # sous-titre du bandeau sombre
     e1.effacer_ip(28, 563, 302, 580, SOMBRE)
     t = e1.ajuster_ip("Trouvez l’installateur solaire qui correspond à votre projet",
@@ -401,10 +408,10 @@ def page7(doc):
     e1.effacer_ip(152, 588, 300, 606, SOMBRE)
     e1.texte_ip(157, 600, "Être rappelé par un installateur", DJ, 6.5, JAUNE)
     # visuel
-    e1.photo(os.path.join(PHOTOS, "couple.jpg"), 439.39 + 18 * e1.ech * e1.f_ip,
+    e1.photo(os.path.join(PHOTOS, "couple_maison.jpg"), 439.39 + 18 * e1.ech * e1.f_ip,
              87.97 + 92 * e1.ech * e1.f_ip,
              439.39 + 310 * e1.ech * e1.f_ip, 87.97 + 225 * e1.ech * e1.f_ip,
-             cadrage=0.42)
+             cadrage=0.30)
     e1.poser()
     e1.enregistrer(os.path.join(ASSETS, "apercu_email1.png"))
 
@@ -414,10 +421,23 @@ def page7(doc):
     def fond(x0, y0):
         a = e2.ipx(x0, y0)
         return e2.img.getpixel((int(a[0]), int(a[1])))
-    # titre sur la bannière sombre
-    e2.effacer_ip(20, 78, 340, 95, fond(120, 60))
+
+    # la marque est conservée à l'identique : on la découpe avant de changer la
+    # photo de bannière, puis on la repose au même endroit
+    a = e2.ipx(0, 33)
+    b = e2.ipx(232, 57)
+    coin = (int(a[0]), int(a[1]), int(b[0]), int(b[1]))
+    bande = e2.img.crop(coin)
+    masque = bande.convert("L").point(lambda v: 255 if v > 130 else 0)
+    pas = e2.ech * e2.f_ip
+    e2.photo(os.path.join(PHOTOS, "toit_crepuscule.jpg"),
+             743.39, 96.37 + 19 * pas, 743.39 + 405 * pas, 96.37 + 300 * pas,
+             cadrage=0.5)
+    e2.img.paste(bande, coin[:2], masque)
+    # vignette « € » de la version patrimoine : sans objet ici
+    e2.effacer_ip(316, 336, 404, 440, (255, 255, 255))
+    # titre sur la bannière (l'ancien texte a disparu avec la photo)
     e2.texte_ip(23, 91, "Valorisez votre toiture", DJB, 13.5, (255, 255, 255))
-    e2.effacer_ip(20, 96, 340, 113, fond(120, 60))
     e2.texte_ip(23, 109, "avec une installation solaire", DJB, 13.5, (255, 255, 255))
     # corps
     for (box, base, texte) in (

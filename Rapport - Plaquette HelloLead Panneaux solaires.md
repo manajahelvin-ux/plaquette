@@ -87,15 +87,33 @@ modale « DEMANDE DE DEVIS : Panneaux photovoltaïques », critères issus des d
 
 Trois e-mails et deux étapes de formulaire :
 
-1. « Installation de panneaux solaires — Quel projet choisir ? » : visuel couple, trois
-   arguments (étude de la toiture, autoconsommation, revente du surplus), bandeau sombre
-   « Trouvez l'installateur solaire qui correspond à votre projet ».
-2. « Valorisez votre toiture avec une installation solaire » : rubrique « Bon à savoir » en
-   trois paragraphes.
+1. « Installation de panneaux solaires — Quel projet choisir ? » : couple devant son pavillon
+   équipé de panneaux, trois arguments (étude de la toiture, autoconsommation, revente du
+   surplus), bandeau sombre « Votre projet solaire chiffré en 1 minute, par des installateurs
+   agréés RGE ! » puis « Trouvez l'installateur solaire qui correspond à votre projet ».
+2. « Valorisez votre toiture avec une installation solaire » : bannière « toiture équipée au
+   crépuscule », rubrique « Bon à savoir » en trois paragraphes.
 3. « Optimisez votre toiture et préparez votre installation » : deux vignettes (installation
    photovoltaïque, autoconsommation) et bouton « Comparer les offres ».
 4. Étapes de formulaire : « Quel type d'installation recherchez-vous ? » (photovoltaïque /
    autoconsommation) et « Quel budget prévoyez-vous ? ».
+
+### 7 bis. Cohérence de la page 7 avec le thème solaire (relecture)
+
+La première version livrée restait lisible comme une page « patrimoine » : plusieurs éléments
+visuels venaient de la déclinaison Assurance et racontaient autre chose que le solaire. Quatre
+corrections, toutes à l'intérieur de la rubrique « visuel » :
+
+| Élément | Avant | Après |
+| --- | --- | --- |
+| E-mail 1 — photo d'accroche | couple au jardin, maison **sans** panneaux | couple devant son pavillon, toiture **équipée de panneaux** |
+| E-mail 1 — accroche du bandeau sombre | « Gagnez du temps dans vos recherches, ça ne vous prendra pas plus d'une minute ! » (texte d'origine, générique) | « Votre projet solaire chiffré en 1 minute, par des installateurs agréés RGE ! » |
+| E-mail 2 — bannière | manoir de pierre au crépuscule (visuel patrimoine) | toiture équipée de panneaux au crépuscule, dans la même lumière sombre (le titre blanc reste lisible) |
+| E-mail 2 — vignette « € » | carte icône euro + image manquante, flottant au milieu du texte | supprimée (aucun sens pour une installation solaire) |
+
+La marque `ComparateurPro` de la bannière a été découpée avant le changement de photo puis
+reposée au pixel près : aucune marque n'est redessinée ni modifiée. Le rythme des trois e-mails,
+leurs titres de section, leurs boutons et la mise en page de la page sont inchangés.
 
 ## 8. Contrôles effectués
 
@@ -138,6 +156,8 @@ Les textes sont centralisés dans `contenus.py`, les visuels des cartes SMS dans
   DejaVu Sans, faute de disposer des polices d'origine autrement qu'en sous-ensembles
   inutilisables. À la taille d'affichage de la plaquette, l'écart est imperceptible ; il devient
   visible à 300 dpi.
+- **Photos.** Les visuels solaires (pavillon équipé, toiture au crépuscule, installateurs) sont
+  des images générées pour l'occasion : aucune photo réelle, aucun annonceur réel.
 - **Captures retouchées.** Les visuels des pages 3, 5, 6 et 7 sont des captures d'écran ;
   les textes y ont été effacés puis réécrits. Sur les aplats dégradés (bandeaux des e-mails),
   l'effacement reprend la couleur du fond ligne par ligne pour éviter tout rectangle visible.
