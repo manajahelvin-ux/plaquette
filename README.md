@@ -6,6 +6,7 @@ Versions sectorielles de la plaquette HelloLead (9 pages, 1440 × 810 pt).
 | --- | --- | --- | --- |
 | Assurance | `Plaquette HelloLead - Assurance V3.pdf` | `Plaquette HelloLead - Assurance (modifiable).pptx` | `Rapport - Plaquette HelloLead Assurance.docx` |
 | Panneaux solaires | `Plaquette HelloLead - Panneaux solaires.pdf` | `Plaquette HelloLead - Panneaux solaires (modifiable).pptx` | `Rapport - Plaquette HelloLead Panneaux solaires.docx` |
+| Fournisseurs d'énergies | `Plaquette HelloLead - Energie - Finale (9 pages).pdf` | `Plaquette HelloLead - Energie - Finale (9 pages).pptx` | `Rapport - Plaquette HelloLead Energies - Phase 2.md` |
 
 ## Version « Panneaux solaires »
 
