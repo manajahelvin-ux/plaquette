@@ -74,6 +74,7 @@ l'original) :
 
 | Élément | Avant | Après |
 | --- | --- | --- |
+| Titre de la page | « LP : Visuels et messages de ré-assurance » | « LP : Visuels et messages de capture » |
 | Photo de la page de destination | éleveur dans son tracteur | bâtiment professionnel équipé de panneaux, installateur devant |
 | Titre de la page de destination | « Assurance agricole » | « Panneaux solaires » |
 | Sous-titre | « Protégez votre activité et vos collaborateurs » | « Des offres adaptées / à votre site professionnel » |
@@ -83,6 +84,11 @@ l'original) :
 | Extrait de formulaire | « Étape 2 · Préciser la taille de l'exploitation » / effectif (0 à 1 … 50 et plus) | « Étape 2 · Préciser la surface de toiture » / 7 tranches de surface |
 | Modération & Enrichissement | contrats recherchés, effectif, échéance | type de projet solaire, surface de toiture disponible, échéance |
 | Fiche acheteur | DU PREAMBERT, céréales, Saint-Nazaire | AXSOL ENR, 84921763500014, Rennes |
+
+Le titre, hérité de la version Assurance, employait le vocabulaire de l'assurance (« ré-assurance »).
+Il décrit maintenant la page de destination et son formulaire ; il est réécrit à l'origine exacte
+(479,1 / 58,7 pt), dans le même corps, la même couleur et la même police (OpenSans-Regular, sous-
+ensemble embarqué dans le PDF d'origine), après retrait du texte précédent du flux.
 
 Les six logos d'assureurs ne pouvaient pas rester dans une plaquette solaire ; aucun logo
 d'installateur n'a été inventé, la bande porte une mention neutre. Les 12 lignes du visuel, les
