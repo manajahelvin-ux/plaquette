@@ -26,6 +26,10 @@ l'original.
 - Contrôle pixel à pixel (rendu 100 dpi) : pages 1, 2, 4, 8, 9 **identiques** (0 pixel d'écart) ;
   pages 3, 5, 6, 7 modifiées uniquement dans les zones autorisées (visuel, formulaire, panneau de
   modération, fiche acheteur) — les colonnes de titres et de puces de gauche ne bougent pas.
+- Direction artistique solaire assumée : pavillon équipé de panneaux, toiture au crépuscule,
+  installateurs sur le toit. Les visuels de la page 7 (e-mails) ont été repris pour que la page
+  ne se lise plus comme une page « patrimoine » — photo d'accroche, bannière, accroche du
+  bandeau sombre et suppression de la vignette « € » (voir rapport, § 7 bis).
 - Toutes les données acheteur sont **fictives** ; contact, téléphone et e-mail restent masqués par
   les rectangles gris de l'original.
 - Régénération : `work/solaire/contenus.py` (textes) → `build_cartes.py` (cartes SMS) →
