@@ -565,6 +565,9 @@ P4_FORM = [
 ]
 # Bande de ré-assurance : les logos d'assureurs sont remplacés par une mention.
 P4_BANDE = "Particuliers · Professionnels · Toitures et ombrières"
+# Le titre de la page venait de la version Assurance (« ré-assurance ») : il décrit
+# maintenant la page de destination et son formulaire.
+P4_TITRE = "LP : Visuels et messages de capture"
 # Panneau : 18 lignes d'origine (7 modération + 11 fiche).
 P4_PANNEAU = [
     "Type de projet solaire :",
@@ -586,6 +589,33 @@ P4_PANNEAU = [
     "Tél : ",
     "Mail : ",
 ]
+
+
+def police_titre():
+    """Sous-ensemble OpenSans-Regular du PDF d'origine (aucun OpenSans système).
+
+    Les sous-ensembles embarqués ne contiennent que les caractères réellement
+    utilisés : on prend le premier qui couvre toutes les lettres du nouveau titre.
+    """
+    chemin = os.path.join(ASSETS, "OpenSans-Regular-P4.ttf")
+    if os.path.exists(chemin):
+        return chemin
+    src = pymupdf.open(SRC)
+    vus = set()
+    for pno in range(src.page_count):
+        for xref, ext, typ, base, ref, enc in src.get_page_fonts(pno):
+            if "OpenSans-Regular" not in base or xref in vus:
+                continue
+            vus.add(xref)
+            buf = src.extract_font(xref)[3]
+            essai = "/tmp/_os_%d.ttf" % xref
+            open(essai, "wb").write(buf)
+            if all(pymupdf.Font(fontfile=essai).has_glyph(ord(c)) for c in P4_TITRE):
+                open(chemin, "wb").write(buf)
+                src.close()
+                return chemin
+    src.close()
+    raise RuntimeError("aucun sous-ensemble OpenSans ne couvre le titre")
 
 
 def _spans_zone(page, zone):
@@ -649,7 +679,20 @@ def page4(doc, ecrire=True):
     im.save(buf, "PNG", optimize=True)
     page.replace_image(136, stream=buf.getvalue())
 
-    # 2. bande de ré-assurance : retrait des logos d'assureurs
+    # 2. titre de la page (hérité de la version Assurance)
+    titres = _spans_zone(page, pymupdf.Rect(465, 18, 970, 82))
+    assert len(titres) == 1, "page 4 : %d titre(s)" % len(titres)
+    t = titres[0]
+    origine, corps, c = tuple(t["origin"]), t["size"], t["color"]
+    page.add_redact_annot(pymupdf.Rect(t["bbox"]).__add__((-1, -2, 1, 2)))
+    page.apply_redactions(images=pymupdf.PDF_REDACT_IMAGE_NONE,
+                          graphics=pymupdf.PDF_REDACT_LINE_ART_NONE,
+                          text=pymupdf.PDF_REDACT_TEXT_REMOVE)
+    page.insert_font(fontname="osr4", fontfile=police_titre())
+    page.insert_text(origine, P4_TITRE, fontname="osr4", fontsize=corps,
+                     color=(((c >> 16) & 255) / 255, ((c >> 8) & 255) / 255, (c & 255) / 255))
+
+    # 3. bande de ré-assurance : retrait des logos d'assureurs
     for info in page.get_image_info(xrefs=True):
         if info["xref"] and 400 < info["bbox"][1] < 445 and 480 < info["bbox"][0] < 960:
             page.delete_image(info["xref"])
@@ -658,12 +701,12 @@ def page4(doc, ecrire=True):
     page.insert_text((719.5 - largeur / 2, 429), P4_BANDE, fontname="djb4",
                      fontsize=9.0, color=(0.235, 0.235, 0.259))
 
-    # 3. textes de la page de destination et de l'extrait de formulaire
+    # 4. textes de la page de destination et de l'extrait de formulaire
     # les textes des visuels restent dans le fond (seul le panneau est éditable)
     _reecrire(page, pymupdf.Rect(483, 85, 962, 403), P4_LP)
     _reecrire(page, pymupdf.Rect(477, 460, 963, 760), P4_FORM)
 
-    # 4. bloc « Modération & Enrichissement » et fiche acheteur
+    # 5. bloc « Modération & Enrichissement » et fiche acheteur
     infos = _reecrire(page, pymupdf.Rect(1000, 448, 1340, 790), P4_PANNEAU, ecrire)
     for info, texte in zip(infos, P4_PANNEAU):
         LIGNES_PANNEAU.append(dict(page=4, x=round(info["x"], 2),
