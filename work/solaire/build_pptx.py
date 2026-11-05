@@ -26,7 +26,7 @@ FOND = os.path.join(RACINE, "work", "solaire", "fond_sans_texte.pdf")
 MODELE = os.path.join(RACINE, "Plaquette HelloLead - Assurance (modifiable).pptx")
 SORTIE = os.path.join(RACINE, "Plaquette HelloLead - Panneaux solaires (modifiable).pptx")
 
-PAGES = (3, 5, 6, 7)
+PAGES = (3, 4, 5, 6, 7)
 BLEU = RGBColor(0x0A, 0x5B, 0xFF)
 NOIR = RGBColor(0, 0, 0)
 MARGE_HAUT = 3.12          # décalage constaté entre haut de span et haut de boîte
@@ -39,7 +39,7 @@ def lignes_panneau(n):
     La liste est écrite par build_pdf.py : la lire dans le PDF serait ambigu,
     l'ancien texte (masqué par le fond du panneau) restant présent dans le flux.
     """
-    return [(d["x"], d["haut"], d["texte"], d["gras"])
+    return [(d["x"], d["haut"], d["texte"], d["gras"], d.get("taille", 13.0))
             for d in LIGNES if d["page"] == n]
 
 
@@ -66,9 +66,12 @@ def main():
         pic = slide.shapes.add_picture(img, 0, 0, width=largeur, height=hauteur)
         pic.name = "fond_p%d" % n
 
-        for i, (x, haut, texte, gras) in enumerate(lignes_panneau(n)):
+        for i, (x, haut, texte, gras, taille) in enumerate(lignes_panneau(n)):
+            # le corps du panneau varie d'une page à l'autre (Poppins 13 pt en
+            # pages 3/5/6/7, DejaVu 11,3 et 10,3 pt en page 4)
+            k = taille / 13.0
             tb = slide.shapes.add_textbox(Emu(int(x * EMU)),
-                                          Emu(int((haut - MARGE_HAUT) * EMU)),
+                                          Emu(int((haut - MARGE_HAUT * k) * EMU)),
                                           Emu(400 * EMU), Emu(19.5 * EMU))
             tb.name = "txt_%d_%d" % (n, i)
             tf = tb.text_frame
@@ -79,7 +82,7 @@ def main():
             p = tf.paragraphs[0]
             run = p.add_run()
             run.text = texte
-            run.font.size = Pt(12.5)
+            run.font.size = Pt(round(12.5 * k, 1))
             run.font.bold = gras
             run.font.name = "Poppins"
             run.font.color.rgb = BLEU if gras else NOIR
