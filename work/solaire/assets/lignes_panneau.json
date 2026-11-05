@@ -1,0 +1,660 @@
+[
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 251.72,
+  "texte": "Type de projet solaire :",
+  "gras": true
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 271.22,
+  "texte": "Photovoltaïque en autoconsommation",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 290.72,
+  "texte": "avec revente du surplus",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 310.22,
+  "texte": "Statut de l’acheteur :",
+  "gras": true
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 329.72,
+  "texte": "Particulier propriétaire",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 349.22,
+  "texte": "Type de bien :",
+  "gras": true
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 368.72,
+  "texte": "Maison individuelle, toiture en tuiles",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 388.22,
+  "texte": "Surface de toiture disponible :",
+  "gras": true
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 407.72,
+  "texte": "30 à 50 m²",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 427.22,
+  "texte": "Consommation annuelle d’électricité :",
+  "gras": true
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 446.72,
+  "texte": "3 500 à 5 000 kWh",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 466.22,
+  "texte": "Budget envisagé :",
+  "gras": true
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 485.72,
+  "texte": "10 000 € à 14 999 €",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 505.22,
+  "texte": "Sous quel délai souhaitez-vous être",
+  "gras": true
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 524.72,
+  "texte": "équipé ?",
+  "gras": true
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 544.22,
+  "texte": "Sous 3 mois",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 585.62,
+  "texte": "Entreprise : SOLARIS ÉNERGIE",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 605.12,
+  "texte": "Siret : 81234567800027",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 624.62,
+  "texte": "Activité : (Installation de panneaux",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 644.12,
+  "texte": "photovoltaïques)",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 663.62,
+  "texte": "Contact :",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 683.12,
+  "texte": "Adresse : 12 rue des Ateliers",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 702.62,
+  "texte": "Ville : Nantes",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 722.12,
+  "texte": "Code Postal : 44000",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 741.62,
+  "texte": "Tél :",
+  "gras": false
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 761.12,
+  "texte": "Mail :",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 266.82,
+  "texte": "Quel type de projet solaire ?",
+  "gras": true
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 286.32,
+  "texte": "Photovoltaïque en autoconsommation",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 305.82,
+  "texte": "Vous envisagez cette installation :",
+  "gras": true
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 325.32,
+  "texte": "professionnel",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 344.82,
+  "texte": "Secteur d’activité de l’entreprise :",
+  "gras": true
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 364.32,
+  "texte": "Industrie et logistique",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 383.82,
+  "texte": "Surface de toiture disponible :",
+  "gras": true
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 403.32,
+  "texte": "500 m² à 1 000 m²",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 422.82,
+  "texte": "Sous quel délai souhaitez-vous être",
+  "gras": true
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 442.32,
+  "texte": "équipé ?",
+  "gras": true
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 461.82,
+  "texte": "Immédiat",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 481.32,
+  "texte": "Puissance de l’installation :",
+  "gras": true
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 500.82,
+  "texte": "36 à 100 kWc",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 551.22,
+  "texte": "Entreprise : AXSOL ENR",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 570.72,
+  "texte": "Siret : 81234567800035",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 590.22,
+  "texte": "Activité : (Installation de panneaux",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 609.72,
+  "texte": "photovoltaïques)",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 629.22,
+  "texte": "Contact :",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 648.72,
+  "texte": "Adresse : 27 avenue de la Gare",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 668.22,
+  "texte": "Ville : Montpellier",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 687.72,
+  "texte": "Code Postal : 34000",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 707.22,
+  "texte": "Tél :",
+  "gras": false
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 726.72,
+  "texte": "Mail :",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 336.12,
+  "texte": "Catégorie CRM du besoin :",
+  "gras": true
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 355.62,
+  "texte": "Panneaux photovoltaïques / EDF Solutions",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 375.12,
+  "texte": "solaires",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 394.62,
+  "texte": "Volume de leads recherché :",
+  "gras": true
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 414.12,
+  "texte": "50 à 99 par mois",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 433.62,
+  "texte": "Zone géographique des interventions :",
+  "gras": true
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 453.12,
+  "texte": "Auvergne-Rhône-Alpes",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 472.62,
+  "texte": "Disponibilité de l’acheteur pour un appel :",
+  "gras": true
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 492.12,
+  "texte": "le matin",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 511.62,
+  "texte": "Avez-vous une heure de préférence :",
+  "gras": true
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 531.12,
+  "texte": "11:00",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 587.52,
+  "texte": "Entreprise : HELIOS INSTALLATION",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 607.02,
+  "texte": "Siret : 81234567800043",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 626.52,
+  "texte": "Activité : (Travaux d’installation",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 646.02,
+  "texte": "électrique)",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 665.52,
+  "texte": "Contact :",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 685.02,
+  "texte": "Adresse : 584 chemin des Vignes",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 704.52,
+  "texte": "Ville : Toulon",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 724.02,
+  "texte": "Code Postal : 83200",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 743.52,
+  "texte": "Tél :",
+  "gras": false
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 763.02,
+  "texte": "Mail :",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 294.22,
+  "texte": "Êtes-vous déjà équipé en solaire ?",
+  "gras": true
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 313.72,
+  "texte": "Non",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 333.22,
+  "texte": "Type de bien à équiper :",
+  "gras": true
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 352.72,
+  "texte": "Maison individuelle",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 372.22,
+  "texte": "Consommation annuelle d’électricité :",
+  "gras": true
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 391.72,
+  "texte": "3 500 à 5 000 kWh",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 411.22,
+  "texte": "Budget envisagé pour l’installation :",
+  "gras": true
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 430.72,
+  "texte": "10 000 € à 14 999 €",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 450.22,
+  "texte": "Souhaitez-vous l’autoconsommation",
+  "gras": true
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 469.72,
+  "texte": "avec revente du surplus ?",
+  "gras": true
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 489.22,
+  "texte": "Oui",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 508.72,
+  "texte": "Échéance du projet :",
+  "gras": true
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 528.22,
+  "texte": "Sous 3 mois",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 564.82,
+  "texte": "Entreprise : SUNWATT FRANCE",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 584.32,
+  "texte": "Siret : 81234567800051",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 603.82,
+  "texte": "Activité : (Installation de panneaux",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 623.32,
+  "texte": "photovoltaïques, autoconsommation,",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 642.82,
+  "texte": "bornes de recharge)",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 662.32,
+  "texte": "Contact :",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 681.82,
+  "texte": "Adresse : 114 rue de Flandre",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 701.32,
+  "texte": "Ville : Paris",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 720.82,
+  "texte": "Code Postal : 75019",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 740.32,
+  "texte": "Tél :",
+  "gras": false
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 759.82,
+  "texte": "Mail :",
+  "gras": false
+ }
+]

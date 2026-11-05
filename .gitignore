@@ -2,3 +2,6 @@
 work/assets/
 __pycache__/
 *.pyc
+
+# fonds sans texte (artefact de fabrication du PPTX)
+work/solaire/fond_sans_texte.pdf
