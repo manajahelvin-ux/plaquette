@@ -271,6 +271,19 @@ def _ligne(v, box, runs, base, bg=None, point=None, x=None):
         curseur += v.largeur_ip(texte, chemin, taille)
 
 
+def _radio(v, cx, cy, selected):
+    """Redessine un bouton radio de la modale CRM (coordonnées image native)."""
+    a = v.ipx(cx, cy)
+    r = 5.2 * v.f_ip
+    v.d.rectangle([a[0] - r - 3, a[1] - r - 3, a[0] + r + 3, a[1] + r + 3],
+                  fill=(255, 255, 255))
+    v.d.ellipse([a[0] - r, a[1] - r, a[0] + r, a[1] + r],
+                outline=(125, 125, 128), width=max(1, round(1.1 * v.f_ip)))
+    if selected:
+        rr = 2.6 * v.f_ip
+        v.d.ellipse([a[0] - rr, a[1] - rr, a[0] + rr, a[1] + rr], fill=(35, 35, 38))
+
+
 def page6(doc):
     page = doc[5]
     v = Region(doc, page, (410.75, 163.51, 1028.5, 517.89), densite=2.2208, nom="crm")
@@ -283,22 +296,21 @@ def page6(doc):
 
     # ---- bandeau de campagne
     _ligne(v, (440, 50, 700, 74), [("Campagne : ", False, 11, T),
-                                   ("Panneaux solaires", False, 11, T)], 69, bg=None,
+                                   (C.P6_CRM["campagne"], False, 11, T)], 69, bg=None,
            point=(660, 50))
     # ---- modale
     _ligne(v, (562, 88, 1000, 106),
-           [("DEMANDE DE DEVIS : Panneaux photovoltaïques", True, 12, ROUGE)], 102, BLANC)
+           [(C.P6_CRM["titre_modale"], True, 12, ROUGE)], 102, BLANC)
     _ligne(v, (562, 132, 1005, 149),
-           [("Avez-vous un projet de panneaux solaires dans les mois à venir ?",
-             False, 11, T)], 145, BLANC)
+           [(C.P6_CRM["q1"], False, 11, T)], 145, BLANC)
     _ligne(v, (632, 196, 900, 211),
-           [("Quel type de projet recherchez-vous ?", True, 11, T)], 208, BLANC)
+           [(C.P6_CRM["q2"], True, 11, T)], 208, BLANC)
     _ligne(v, (653, 232, 900, 248),
            [("Panneaux photovoltaïques", False, 11, T)], 244, BLANC, x=2)
     _ligne(v, (653, 252, 900, 266),
            [("Solutions solaires EDF", False, 11, T)], 263, BLANC, x=2)
     _ligne(v, (562, 314, 930, 330),
-           [("Vous envisagez cette installation à titre :", True, 11, T),
+           [(C.P6_CRM["q3"], True, 11, T),
             (" [Obligatoire]", False, 11, GRIS)], 326, BLANC)
     _ligne(v, (562, 384, 800, 400),
            [("Type de projet", True, 11, T), (" [Obligatoire]", False, 11, GRIS)],
@@ -319,37 +331,52 @@ def page6(doc):
     _ligne(v, (562, 610, 800, 626),
            [("Êtes-vous propriétaire du bâtiment ?", True, 11, T)], 622, BLANC)
     _ligne(v, (1000, 162, 1290, 181),
-           [("\u2611", True, 12, (96, 96, 96)), ("  PANNEAUX PHOTOVOLTAÏQUES (B2B)", True, 11, T)],
+           [("\u2611", True, 12, (96, 96, 96)),
+            ("  " + C.P6_CRM["matching_valeur"], True, 11, T)],
            176, BLANC, x=22)
 
-    # ---- colonne de gauche (fiche société, assombrie par la modale)
+    # ---- colonne de gauche (fiche société acheteuse, assombrie par la modale)
     for y0, y1, base in ((214, 228, 225), (241, 255, 252), (268, 282, 279)):
-        _ligne(v, (14, y0, 300, y1), [("SOLARIS ÉNERGIE", False, 10, SOMME)], base,
+        _ligne(v, (14, y0, 300, y1), [(C.P6_CRM["soe"], False, 10, SOMME)], base,
                bg=None, point=(200, 205))
-    _ligne(v, (14, 296, 300, 310), [("44000", False, 10, SOMME)], 306, bg=None,
+    _ligne(v, (14, 296, 300, 310), [("74000", False, 10, SOMME)], 306, bg=None,
            point=(200, 205))
-    _ligne(v, (14, 322, 300, 336), [("NANTES", False, 10, SOMME)], 332, bg=None,
+    _ligne(v, (14, 322, 300, 336), [("ANNECY", False, 10, SOMME)], 332, bg=None,
            point=(200, 205))
+    _ligne(v, (14, 348, 300, 362), [(C.P6_CRM["siret"], False, 10, SOMME)], 359,
+           bg=None, point=(200, 345))
     _ligne(v, (14, 402, 340, 417),
-           [("NAF 4321A : Installation électrique", False, 9, SOMME)], 413, bg=None,
+           [(C.P6_CRM["naf"], False, 9, SOMME)], 413, bg=None,
            point=(300, 398))
     _ligne(v, (14, 419, 340, 434),
-           [("et travaux d’installation solaire", False, 9, SOMME)], 430, bg=None,
+           [(C.P6_CRM["naf2"], False, 9, SOMME)], 430, bg=None,
            point=(300, 398))
-    _ligne(v, (14, 458, 340, 472), [("Effectif 10 à 19", False, 10, SOMME)], 468,
-           bg=None, point=(300, 478))
-    for y0, y1, base, texte in ((214, 230, 226, "Monsieur"), (241, 257, 253, "MARC"),
-                                (268, 284, 280, "VASSEUR")):
+    _ligne(v, (14, 436, 334, 450), [(C.P6_CRM["creation"], False, 9, SOMME)], 447,
+           bg=None, point=(300, 440))
+    _ligne(v, (14, 458, 334, 472), [("Effectif 50 à 99", False, 10, SOMME)], 468,
+           bg=None, point=(300, 462))
+    for y0, y1, base, texte in ((214, 230, 226, "Madame"), (241, 257, 253, "CLAIRE"),
+                                (268, 284, 280, "MOREL")):
         _ligne(v, (370, y0, 540, y1), [(texte, False, 10, SOMME)], base, bg=None,
                point=(540, 205))
-    _ligne(v, (370, 322, 558, 340),
-           [("m.vasseur@solaris-energie.fr", False, 9, SOMME)], 336, bg=None,
-           point=(540, 350))
+    _ligne(v, (370, 322, 552, 340),
+           [(C.P6_CRM["mail"], False, 9, SOMME)], 336, bg=None,
+           point=(500, 325))
     # ---- historique
-    _ligne(v, (16, 604, 340, 616), [("projet photovoltaïque, 62 m²", False, 9, SOMME)],
+    _ligne(v, (16, 584, 340, 598), [(C.P6_CRM["historique"][0], False, 9, SOMME)],
+           594, bg=None, point=(300, 580))
+    _ligne(v, (16, 604, 340, 616), [(C.P6_CRM["historique"][1], False, 9, SOMME)],
            612, bg=None, point=(300, 600))
-    _ligne(v, (16, 622, 340, 634), [("devis demandé : 3 installateurs", False, 9, SOMME)],
+    _ligne(v, (16, 622, 340, 634), [(C.P6_CRM["historique"][2], False, 9, SOMME)],
            630, bg=None, point=(300, 640))
+
+    # ---- cohérence des réponses CRM avec le profil acheteur B2B
+    _radio(v, 575, 552, False)   # surface : 100 à 500 m² -> non
+    _radio(v, 575, 572, True)    # surface : 1 000 m² et plus -> oui
+    _radio(v, 575, 636, True)    # propriétaire du bâtiment : Oui
+    _radio(v, 575, 655, False)   # propriétaire du bâtiment : Non
+    _radio(v, 575, 700, False)   # échéance : sous 3 mois -> non
+    _radio(v, 575, 720, True)    # échéance : 3 à 6 mois -> oui
 
     v.poser()
     v.enregistrer(os.path.join(ASSETS, "apercu_crm.png"))
@@ -409,7 +436,7 @@ def page7(doc):
     e1.effacer_ip(152, 588, 300, 606, SOMBRE)
     e1.texte_ip(157, 600, "Être rappelé par un installateur", DJ, 6.5, JAUNE)
     # visuel
-    e1.photo(os.path.join(PHOTOS, "couple_maison.jpg"), 439.39 + 18 * e1.ech * e1.f_ip,
+    e1.photo(os.path.join(PHOTOS, "acheteurs_b2b_email.jpg"), 439.39 + 18 * e1.ech * e1.f_ip,
              87.97 + 92 * e1.ech * e1.f_ip,
              439.39 + 310 * e1.ech * e1.f_ip, 87.97 + 225 * e1.ech * e1.f_ip,
              cadrage=0.30)
@@ -569,26 +596,9 @@ P4_BANDE = "Particuliers · Professionnels · Toitures et ombrières"
 # maintenant la page de destination et son formulaire.
 P4_TITRE = "LP : Visuels et messages de capture"
 # Panneau : 18 lignes d'origine (7 modération + 11 fiche).
-P4_PANNEAU = [
-    "Type de projet solaire :",
-    "Photovoltaïque en autoconsommation",
-    "avec revente du surplus",
-    "Surface de toiture disponible :",
-    "250 à 500 m²",
-    "Échéance du projet :",
-    "Sous 3 mois",
-    "Entreprise : AXSOL ENR",
-    "Siret : 84921763500014",
-    "Activité : (Installation de panneaux",
-    "photovoltaïques en toiture et",
-    "ombrières de parking)",
-    "Contact : ",
-    "Adresse : 8 rue des Ateliers",
-    "Ville : Rennes",
-    "Code postal : 35 000",
-    "Tél : ",
-    "Mail : ",
-]
+# Source unique : contenus.PANNEAUX[4] (acheteur final B2B, pas un installateur).
+P4_PANNEAU = ([texte for texte, _ in C.PANNEAUX[4]["mod"]]
+              + list(C.PANNEAUX[4]["fiche"]))
 
 
 def police_titre():

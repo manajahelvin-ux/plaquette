@@ -1,24 +1,29 @@
 # -*- coding: utf-8 -*-
 """Contenus de la plaquette « Panneaux solaires ».
 
-Tous les textes de secteur (pages 3, 5, 6, 7) sont regroupés ici :
+Tous les textes de secteur (pages 3 à 7) sont regroupés ici :
 cartes RCS, maquettes (page de destination, formulaire META, CRM, emails),
 blocs « Modération & Enrichissement » et fiches acheteur.
 
 Règle de mise en page : chaque bloc reprend exactement le nombre de lignes de
 l'original et se cale sur les mêmes lignes de base (voir panneaux_origine.json).
-Aucune donnée réelle : installateurs, SIRET, adresses et contacts sont fictifs.
+
+Les fiches décrivent des ACHETEURS de panneaux solaires (prospects finaux),
+jamais des installateurs : quatre profils B2B (pages 3, 4, 6, 7) et un profil
+B2C (page 5, dont les visuels et le formulaire sont orientés résidence
+principale). Aucune donnée réelle : sociétés, SIRET, adresses et contacts sont
+fictifs ; téléphone et e-mail restent masqués dans la maquette.
 """
 
 # --------------------------------------------------------------- page 3 (SMS - RCS)
 
 CARTE_1 = {
-    "kicker": ["PHOTOVOLTAÏQUE", "PARTICULIERS & PROFESSIONNELS"],
+    "kicker": ["PHOTOVOLTAÏQUE", "ENTREPRISES & PROFESSIONNELS"],
     "bandeau": "DEVIS GRATUIT • INSTALLATEURS RGE",
     "titre": "Panneaux solaires : divisez votre facture",
     "texte": (
-        "Estimez vos économies et comparez les installateurs agréés "
-        "de votre région."
+        "Réduisez la facture de votre site et comparez les installateurs "
+        "agréés de votre région."
     ),
     "cta": "Ça m'intéresse !",
     "cta_couleur": (10, 91, 255),
@@ -42,7 +47,7 @@ CARTE_2 = {
 P3_LANDING = {
     "titre": ["Trouvez le meilleur", "Partenaire", "pour votre projet", "photovoltaïque !"],
     "intro": ["Comparez les offres de panneaux", "solaires et d'autoconsommation",
-              "adaptées à votre logement."],
+              "adaptées à votre bâtiment."],
     "question": ["Concernant votre projet,", "vous êtes :"],
     "choix": ["Particulier", "Professionnel"],
 }
@@ -50,6 +55,8 @@ P3_LANDING = {
 # ------------------------------------------------------- colonnes de droite
 
 # (texte, gras) — gras = étiquette bleue, sinon valeur noire.
+# « mod » = qualification du besoin d'achat ; « fiche » = coordonnées de
+# l'acheteur final (entreprise utilisatrice ou particulier), pas de l'installateur.
 PANNEAUX = {
     3: {
         "mod": [
@@ -57,30 +64,54 @@ PANNEAUX = {
             ("Photovoltaïque en autoconsommation", False),
             ("avec revente du surplus", False),
             ("Statut de l’acheteur :", True),
-            ("Particulier propriétaire", False),
-            ("Type de bien :", True),
-            ("Maison individuelle, toiture en tuiles", False),
+            ("Professionnel (B2B), propriétaire", False),
+            ("Type de bâtiment :", True),
+            ("Entrepôt logistique, toiture bac acier", False),
             ("Surface de toiture disponible :", True),
-            ("30 à 50 m²", False),
+            ("500 à 1 000 m²", False),
             ("Consommation annuelle d’électricité :", True),
-            ("3 500 à 5 000 kWh", False),
+            ("80 000 à 120 000 kWh", False),
             ("Budget envisagé :", True),
-            ("10 000 € à 14 999 €", False),
+            ("70 000 € à 120 000 €", False),
             ("Sous quel délai souhaitez-vous être", True),
             ("équipé ?", True),
-            ("Sous 3 mois", False),
+            ("Dans 3 à 6 mois", False),
         ],
         "fiche": [
-            "Entreprise : SOLARIS ÉNERGIE",
-            "Siret : 81234567800027",
-            "Activité : (Installation de panneaux",
-            "photovoltaïques)",
+            "Entreprise : DOCKS DE L’OUEST",
+            "Siret : 91357924600018",
+            "Activité : (Entreposage et logistique",
+            "pour la distribution régionale)",
             "Contact :",
-            "Adresse : 12 rue des Ateliers",
+            "Adresse : 24 quai des Frégates",
             "Ville : Nantes",
-            "Code Postal : 44000",
+            "Code Postal : 44200",
             "Tél :",
             "Mail :",
+        ],
+    },
+    4: {
+        "mod": [
+            ("Type de projet solaire :", True),
+            ("Photovoltaïque en autoconsommation", False),
+            ("avec revente du surplus", False),
+            ("Surface de toiture disponible :", True),
+            ("250 à 500 m²", False),
+            ("Échéance du projet :", True),
+            ("Dans 3 à 6 mois", False),
+        ],
+        "fiche": [
+            "Entreprise : HÔTEL DES EMBRUNS",
+            "Siret : 90246813500027",
+            "Activité : (Hôtellerie et restauration",
+            "avec espace bien-être et",
+            "parking couvert)",
+            "Contact : ",
+            "Adresse : 9 avenue du Littoral",
+            "Ville : Saint-Malo",
+            "Code postal : 35400",
+            "Tél : ",
+            "Mail : ",
         ],
     },
     5: {
@@ -88,26 +119,26 @@ PANNEAUX = {
             ("Quel type de projet solaire ?", True),
             ("Photovoltaïque en autoconsommation", False),
             ("Vous envisagez cette installation :", True),
-            ("professionnel", False),
-            ("Secteur d’activité de l’entreprise :", True),
-            ("Industrie et logistique", False),
+            ("à titre personnel (B2C)", False),
+            ("Statut et type de bien :", True),
+            ("Propriétaire occupant, maison", False),
             ("Surface de toiture disponible :", True),
-            ("500 m² à 1 000 m²", False),
+            ("30 à 50 m²", False),
             ("Sous quel délai souhaitez-vous être", True),
             ("équipé ?", True),
-            ("Immédiat", False),
+            ("Sous 6 mois", False),
             ("Puissance de l’installation :", True),
-            ("36 à 100 kWc", False),
+            ("3 à 6 kWc", False),
         ],
         "fiche": [
-            "Entreprise : AXSOL ENR",
-            "Siret : 81234567800035",
-            "Activité : (Installation de panneaux",
-            "photovoltaïques)",
+            "Nom : MARTIN (exemple fictif)",
+            "Siret : Sans objet (particulier)",
+            "Projet : (Équipement de la",
+            "résidence principale)",
             "Contact :",
-            "Adresse : 27 avenue de la Gare",
-            "Ville : Montpellier",
-            "Code Postal : 34000",
+            "Adresse : 16 rue des Tilleuls",
+            "Ville : La Roche-sur-Yon",
+            "Code Postal : 85000",
             "Tél :",
             "Mail :",
         ],
@@ -117,24 +148,24 @@ PANNEAUX = {
             ("Catégorie CRM du besoin :", True),
             ("Panneaux photovoltaïques / EDF Solutions", False),
             ("solaires", False),
-            ("Volume de leads recherché :", True),
-            ("50 à 99 par mois", False),
-            ("Zone géographique des interventions :", True),
-            ("Auvergne-Rhône-Alpes", False),
-            ("Disponibilité de l’acheteur pour un appel :", True),
-            ("le matin", False),
-            ("Avez-vous une heure de préférence :", True),
-            ("11:00", False),
+            ("Type de projet et statut :", True),
+            ("Autoconsommation, professionnel (B2B)", False),
+            ("Surface de toiture disponible :", True),
+            ("1 000 à 5 000 m²", False),
+            ("Propriétaire du bâtiment :", True),
+            ("Oui", False),
+            ("Disponibilité pour un appel :", True),
+            ("Demain à 11:00", False),
         ],
         "fiche": [
-            "Entreprise : HELIOS INSTALLATION",
-            "Siret : 81234567800043",
-            "Activité : (Travaux d’installation",
-            "électrique)",
+            "Entreprise : BRASSERIE DES ALPES",
+            "Siret : 90135792400035",
+            "Activité : (Fabrication de bière et",
+            "boissons artisanales)",
             "Contact :",
-            "Adresse : 584 chemin des Vignes",
-            "Ville : Toulon",
-            "Code Postal : 83200",
+            "Adresse : 18 rue des Sources",
+            "Ville : Annecy",
+            "Code Postal : 74000",
             "Tél :",
             "Mail :",
         ],
@@ -143,28 +174,28 @@ PANNEAUX = {
         "mod": [
             ("Êtes-vous déjà équipé en solaire ?", True),
             ("Non", False),
-            ("Type de bien à équiper :", True),
-            ("Maison individuelle", False),
+            ("Type de bâtiment à équiper :", True),
+            ("Siège social et entrepôt", False),
             ("Consommation annuelle d’électricité :", True),
-            ("3 500 à 5 000 kWh", False),
+            ("120 000 à 200 000 kWh", False),
             ("Budget envisagé pour l’installation :", True),
-            ("10 000 € à 14 999 €", False),
+            ("100 000 € à 180 000 €", False),
             ("Souhaitez-vous l’autoconsommation", True),
             ("avec revente du surplus ?", True),
             ("Oui", False),
             ("Échéance du projet :", True),
-            ("Sous 3 mois", False),
+            ("Dans 3 à 6 mois", False),
         ],
         "fiche": [
-            "Entreprise : SUNWATT FRANCE",
-            "Siret : 81234567800051",
-            "Activité : (Installation de panneaux",
-            "photovoltaïques, autoconsommation,",
-            "bornes de recharge)",
+            "Entreprise : VERGERS DE PROVENCE",
+            "Siret : 90579135700043",
+            "Activité : (Culture et conditionnement",
+            "de fruits, stockage et",
+            "expédition)",
             "Contact :",
-            "Adresse : 114 rue de Flandre",
-            "Ville : Paris",
-            "Code Postal : 75019",
+            "Adresse : 310 chemin des Vergers",
+            "Ville : Aix-en-Provence",
+            "Code Postal : 13100",
             "Tél :",
             "Mail :",
         ],
@@ -212,19 +243,19 @@ P6_CRM = {
     "o7": ["Sous 3 mois", "3 à 6 mois", "Plus de 6 mois"],
     "matching_titre": "Résultat du matching :",
     "matching_valeur": "PANNEAUX PHOTOVOLTAÏQUES (B2B)",
-    "soe": "SOLARIS ÉNERGIE",
-    "acheteur": "Monsieur VASSEUR",
-    "mail": "m.vasseur@solaris-energie.fr",
-    "tel": "750771600010",
-    "naf": "NAF 4321A : Installation électrique",
-    "naf2": "et travaux d’installation photovoltaïque",
-    "creation": "Date de création : Avril 2012",
+    "soe": "BRASSERIE DES ALPES",
+    "siret": "90135792400035",
+    "acheteur": "Madame CLAIRE MOREL",
+    "mail": "c.morel@brasserie-alpes.example",
+    "naf": "NAF 1105Z : Fabrication de bière",
+    "naf2": "Site de production et entrepôt",
+    "creation": "Date de création : Juin 2016",
     "historique": [
-        "> 11/03/2026 15:12 - hellodevis_28",
-        "projet photovoltaïque, 62 m²",
+        "> 12/03/2026 11:00 - hellodevis_28",
+        "projet photovoltaïque, 1 800 m²",
         "devis demandé : 3 installateurs",
         "",
-        "relance prévue le 18/03",
+        "relance prévue le 19/03",
     ],
 }
 
@@ -243,10 +274,10 @@ P7_EMAIL_1 = {
         ("Ombrières et parkings",
          "Production solaire sur ombrière, sans consommer de terrain."),
     ],
-    "bandeau": ["Gagnez du temps dans vos recherches,",
-                "on vous répond en moins d’une minute !"],
-    "bandeau_texte": "Trouvez l’installateur solaire de votre région et comparez.",
-    "boutons": ["Je m’inscris", "Être rappelé"],
+    "bandeau": ["Votre projet solaire chiffré en 1 minute,",
+                "par des installateurs agréés RGE !"],
+    "bandeau_texte": "Trouvez l’installateur solaire qui correspond à votre projet",
+    "boutons": ["Je m’inscris", "Être rappelé par un installateur"],
 }
 
 # Email 2 : colonne du milieu (image p7_img191).

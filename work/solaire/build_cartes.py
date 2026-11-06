@@ -164,8 +164,10 @@ def construire(carte, taille_pt, photo, hauteur_photo, sortie):
 def main():
     import contenus
     os.makedirs(ASSETS, exist_ok=True)
-    p1 = _photo(os.path.join(PHOTOS, "maison.jpg"),
+    # Carte du haut : illustration B2B (décideurs devant leur site équipé).
+    p1 = _photo(os.path.join(PHOTOS, "acheteurs_b2b_rcs.jpg"),
                 round(CARTE_1_PT[0] * ECHELLE), 400)
+    # Carte du bas : couple avec la maison équipée en arrière-plan (conservé).
     p2 = _photo(os.path.join(PHOTOS, "couple.jpg"),
                 round(CARTE_2_PT[0] * ECHELLE), 370)
     construire(contenus.CARTE_1, CARTE_1_PT, p1, 400,
