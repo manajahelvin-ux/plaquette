@@ -5,3 +5,9 @@ __pycache__/
 
 # fonds sans texte (artefact de fabrication du PPTX)
 work/solaire/fond_sans_texte.pdf
+
+# environnement Python local
+.venv/
+
+# contrôles locaux (captures et copies de comparaison)
+work/qa_solaire/

@@ -16,11 +16,15 @@ l'original.
 
 - Segments retenus, d'après les rubriques CRM `id_rubrique=2019809` (EDF Solutions solaires) et
   `id_rubrique=2017948` (Panneaux photovoltaïques) :
-  p3 = installation photovoltaïque résidentielle (comparateur d'installateurs),
+  p3 = SMS/RCS, acheteur B2B (entrepôt logistique, autoconsommation),
   p4 = page de destination professionnelle (toiture d'entreprise, autoconsommation),
-  p5 = SOLARIS ÉNERGIE, devis panneaux solaires,
-  p6 = fiche CRM d'un projet photovoltaïque B2B,
-  p7 = séquence e-mailing installateur solaire.
+  p5 = META Ads, devis panneaux solaires B2C (résidence principale ; annonceur Solaris Énergie),
+  p6 = CALL, fiche CRM d'un acheteur B2B (brasserie, toiture 1 000 à 5 000 m²),
+  p7 = Emailing, séquence solaire avec accroche B2B et acheteur B2B (siège social et entrepôt).
+- Blocs « Modération & Enrichissement » / fiches acheteur : ils décrivent des **acheteurs de
+  panneaux solaires** (prospects finaux), jamais des installateurs. Répartition demandée :
+  **4 B2B** (pages 3, 4, 6, 7) et **1 B2C** (page 5, la plus orientée particulier/logement).
+  La page 3 est explicitement B2B.
 - Sur chaque page sectorielle, seules quatre rubriques sont modifiées : visuel, formulaire / page
   de destination, bloc « Modération & Enrichissement » et fiche acheteur. Titres, puces, pictos,
   flèches, marques, légendes et cartes de fond sont inchangés ; le nombre de lignes de chaque
@@ -32,15 +36,18 @@ l'original.
   messages de capture » ; les six logos d'assureurs de la bande de ré-assurance (Gan, Allianz,
   Groupama, AXA, MACIF, Hiscox) sont retirés et remplacés par une mention neutre ; aucun logo
   d'installateur n'est inventé.
-- Direction artistique solaire assumée : pavillon équipé de panneaux, toiture au crépuscule,
-  installateurs sur le toit. Les visuels de la page 7 (e-mails) ont été repris pour que la page
+- Direction artistique solaire assumée : site professionnel équipé de panneaux, toiture au
+  crépuscule, installateurs sur le toit. Page 3 : carte du haut = illustration B2B (décideurs
+  devant leur bâtiment équipé), carte du bas = couple avec maison équipée en arrière-plan
+  (conservée). Page 7 : photo d'accroche en haut à gauche = visuel B2B (décideurs en terrasse
+  devant leur siège équipé). Les visuels de la page 7 (e-mails) ont été repris pour que la page
   ne se lise plus comme une page « patrimoine » — photo d'accroche, bannière, accroche du
   bandeau sombre et suppression de la vignette « € » (voir rapport, § 7 bis).
 - Toutes les données acheteur sont **fictives** ; contact, téléphone et e-mail restent masqués par
   les rectangles gris de l'original.
 - Régénération : `work/solaire/contenus.py` (textes) → `build_cartes.py` (cartes SMS) →
   `build_pdf.py` (PDF de référence ; `FOND=1` produit les fonds sans texte) → `build_pptx.py`
-  (PPTX modifiable). Voir le rapport, § 10.
+  (PPTX modifiable). Dépendances : `work/solaire/requirements.txt`. Voir le rapport, § 10.
 
 ## Version « Assurance »
 
