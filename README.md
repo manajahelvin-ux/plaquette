@@ -7,6 +7,39 @@ Versions sectorielles de la plaquette HelloLead (9 pages, 1440 × 810 pt).
 | Assurance | `Plaquette HelloLead - Assurance V3.pdf` | `Plaquette HelloLead - Assurance (modifiable).pptx` | `Rapport - Plaquette HelloLead Assurance.docx` |
 | Panneaux solaires | `Plaquette HelloLead - Panneaux solaires.pdf` | `Plaquette HelloLead - Panneaux solaires (modifiable).pptx` | `Rapport - Plaquette HelloLead Panneaux solaires.docx` |
 | Fournisseurs d'énergies | `Plaquette HelloLead - Energie - Finale (9 pages).pdf` | `Plaquette HelloLead - Energie - Finale (9 pages).pptx` | `Rapport - Plaquette HelloLead Energies - Phase 2.md` |
+| Caisses enregistreuses tactiles | `Plaquette HelloLead - Caisses enregistreuses tactiles.pdf` | `Plaquette HelloLead - Caisses enregistreuses tactiles (modifiable).pptx` | `Rapport - Plaquette HelloLead Caisses tactiles.docx` |
+
+## Version « Caisses enregistreuses tactiles »
+
+Déclinaison construite sur la même trame : pages sectorielles p3 (SMS – RCS), p4 (SEA – GPT Ads),
+p5 (META Ads), p6 (CALL) et p7 (Emailing) ; toutes les autres pages sont strictement identiques.
+
+- Cible : éditeurs et distributeurs de **caisses enregistreuses tactiles** (matériel + logiciel)
+  qui prospectent les **CHR**, les **boulangeries**, la **restauration rapide** et les
+  **commerces alimentaires** (rubrique CRM `id_rubrique=2015589`).
+- Les neuf clients potentiels cités par le client (JDC SA, Cashmag, Lightspeed, L'Addition,
+  SumUp Pro, Clyo Systems, Zelty, Innovorder, Tactill) ne sont **pas** représentés : la plaquette
+  reste générique, comme les précédentes.
+- Pages : p3 = cartes SMS (restaurateur au comptoir / boulanger à sa caisse), page de destination
+  « caisse tactile », acheteur CHR à Lyon ; p4 = page de destination professionnelle (comptoir
+  équipé), formulaire « nombre de points de vente », acheteur café-brasserie à Rennes ;
+  p5 = META Ads, marque fictive **Caisseo**, acheteur restaurant à Bordeaux ; p6 = CALL, fiche
+  CRM « CAISSE TACTILE (CHR) », acheteur restauration rapide à Annecy ; p7 = Emailing, séquence
+  « caisses tactiles », acheteur boulangerie à Aix-en-Provence.
+- Profils **tous B2B** (pas de volet particulier) : chaque fiche décrit l'acheteur final
+  (restaurant, café, boulangerie, commerce), jamais un éditeur de caisse.
+- Mêmes règles de mise en page que la version solaire : quatre rubriques modifiées par page
+  (visuel, formulaire / page de destination, bloc « Modération & Enrichissement », fiche
+  acheteur), nombre de lignes identique à l'original (26 / 18 / 23 / 21 / 24), colonnes de
+  titres et de puces **inchangées** (0 pixel d'écart).
+- Contrôle pixel à pixel (100 dpi) : pages 1, 2, 8, 9 **identiques** à la version solaire.
+  Aucune occurrence de « solaire », « photovoltaïque », « installateur », « toiture » ou « RGE »
+  ne subsiste dans le PDF.
+- Toutes les données acheteur sont **fictives** (sociétés, SIRET, adresses, contacts) ;
+  téléphone et e-mail restent masqués par les rectangles gris de l'original.
+- Régénération : `work/caisses/contenus.py` (textes) → `build_cartes.py` (cartes SMS) →
+  `build_pdf.py` (PDF de référence ; `FOND=1` produit les fonds sans texte) → `build_pptx.py`
+  (PPTX modifiable). Dépendances : `work/caisses/requirements.txt`. Voir le rapport, § 10.
 
 ## Version « Panneaux solaires »
 
