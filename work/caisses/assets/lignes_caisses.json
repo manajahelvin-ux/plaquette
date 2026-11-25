@@ -1,0 +1,898 @@
+[
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 251.72,
+  "texte": "Type d’équipement recherché :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 271.22,
+  "texte": "Caisse tactile avec logiciel de",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 290.72,
+  "texte": "gestion intégré",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 310.22,
+  "texte": "Statut de l’acheteur :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 329.72,
+  "texte": "Professionnel (CHR), exploitant",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 349.22,
+  "texte": "Type d’établissement :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 368.72,
+  "texte": "Restaurant traditionnel, 80 couverts",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 388.22,
+  "texte": "Nombre de points de vente :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 407.72,
+  "texte": "2 établissements à Lyon",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 427.22,
+  "texte": "Tickets encaissés par jour :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 446.72,
+  "texte": "150 à 250 tickets",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 466.22,
+  "texte": "Budget envisagé :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 485.72,
+  "texte": "2 000 € à 4 000 €",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 505.22,
+  "texte": "Sous quel délai souhaitez-vous être",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 524.72,
+  "texte": "équipé ?",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 544.22,
+  "texte": "Sous 1 mois",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 585.62,
+  "texte": "Entreprise : LE BISTROT DES HALLES",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 605.12,
+  "texte": "Siret : 91357924600026",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 624.62,
+  "texte": "Activité : (Restauration traditionnelle,",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 644.12,
+  "texte": "2 établissements en centre-ville)",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 663.62,
+  "texte": "Contact :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 683.12,
+  "texte": "Adresse : 14 rue des Halles",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 702.62,
+  "texte": "Ville : Lyon",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 722.12,
+  "texte": "Code Postal : 69002",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 741.62,
+  "texte": "Tél :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 3,
+  "x": 1098.9,
+  "haut": 761.12,
+  "texte": "Mail :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 456.71,
+  "texte": "Type d’équipement recherché :",
+  "gras": true,
+  "taille": 11.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 476.47,
+  "texte": "Caisse tactile avec logiciel de gestion",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 493.47,
+  "texte": "et terminal de paiement",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 513.71,
+  "texte": "Type d’établissement :",
+  "gras": true,
+  "taille": 11.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 533.47,
+  "texte": "Café-brasserie, 60 couverts",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 552.71,
+  "texte": "Échéance du projet :",
+  "gras": true,
+  "taille": 11.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 572.47,
+  "texte": "Sous 1 mois",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 596.47,
+  "texte": "Entreprise : CAFÉ DES ARCADES",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 613.47,
+  "texte": "Siret : 90246813500019",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 630.47,
+  "texte": "Activité : (Débit de boissons et",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 645.47,
+  "texte": "restauration rapide sur place,",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 660.47,
+  "texte": "terrasse 40 places)",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 679.47,
+  "texte": "Contact : ",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 696.47,
+  "texte": "Adresse : 3 place des Arcades",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 713.47,
+  "texte": "Ville : Rennes",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 730.47,
+  "texte": "Code postal : 35000",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 747.47,
+  "texte": "Tél : ",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 4,
+  "x": 1011.0,
+  "haut": 764.47,
+  "texte": "Mail : ",
+  "gras": false,
+  "taille": 10.3
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 266.82,
+  "texte": "Quel type d’équipement recherché ?",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 286.32,
+  "texte": "Caisse tactile et logiciel de gestion",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 305.82,
+  "texte": "Votre établissement :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 325.32,
+  "texte": "Restaurant traditionnel (CHR)",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 344.82,
+  "texte": "Nombre de couverts en salle :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 364.32,
+  "texte": "60 à 100 couverts",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 383.82,
+  "texte": "Nombre de points de vente :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 403.32,
+  "texte": "2 établissements",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 422.82,
+  "texte": "Sous quel délai souhaitez-vous être",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 442.32,
+  "texte": "équipé ?",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 461.82,
+  "texte": "Sous 1 mois",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 481.32,
+  "texte": "Fonctions attendues :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 500.82,
+  "texte": "Encaissement, commandes, stocks",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 551.22,
+  "texte": "Entreprise : LA TABLE DES QUAIS",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 570.72,
+  "texte": "Siret : 90482135700018",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 590.22,
+  "texte": "Activité : (Restauration traditionnelle",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 609.72,
+  "texte": "et traiteur, 2 points de vente)",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 629.22,
+  "texte": "Contact :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 648.72,
+  "texte": "Adresse : 6 quai des Chartrons",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 668.22,
+  "texte": "Ville : Bordeaux",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 687.72,
+  "texte": "Code Postal : 33000",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 707.22,
+  "texte": "Tél :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 5,
+  "x": 1091.2,
+  "haut": 726.72,
+  "texte": "Mail :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 336.12,
+  "texte": "Catégorie CRM du besoin :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 355.62,
+  "texte": "Caisses enregistreuses tactiles,",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 375.12,
+  "texte": "restauration (CHR)",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 394.62,
+  "texte": "Type d’équipement et statut :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 414.12,
+  "texte": "Caisse tactile, professionnel (CHR)",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 433.62,
+  "texte": "Nombre de points de vente :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 453.12,
+  "texte": "3 établissements",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 472.62,
+  "texte": "Propriétaire du matériel :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 492.12,
+  "texte": "Oui",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 511.62,
+  "texte": "Disponibilité pour un appel :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 531.12,
+  "texte": "Demain à 11:00",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 587.52,
+  "texte": "Entreprise : LE COMPTOIR DU MARCHÉ",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 607.02,
+  "texte": "Siret : 90135792400026",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 626.52,
+  "texte": "Activité : (Restauration rapide,",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 646.02,
+  "texte": "3 points de vente en centre-ville)",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 665.52,
+  "texte": "Contact :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 685.02,
+  "texte": "Adresse : 27 place du Marché",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 704.52,
+  "texte": "Ville : Annecy",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 724.02,
+  "texte": "Code Postal : 74000",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 743.52,
+  "texte": "Tél :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 6,
+  "x": 1082.2,
+  "haut": 763.02,
+  "texte": "Mail :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 294.22,
+  "texte": "Êtes-vous déjà équipé d’une caisse tactile ?",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 313.72,
+  "texte": "Non, caisse traditionnelle",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 333.22,
+  "texte": "Type d’établissement à équiper :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 352.72,
+  "texte": "Boulangerie-pâtisserie et salon de thé",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 372.22,
+  "texte": "Tickets encaissés par jour :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 391.72,
+  "texte": "300 à 500 tickets",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 411.22,
+  "texte": "Budget envisagé pour l’équipement :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 430.72,
+  "texte": "3 000 € à 6 000 €",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 450.22,
+  "texte": "Souhaitez-vous un logiciel de gestion",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 469.72,
+  "texte": "intégré (stocks, production) ?",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 489.22,
+  "texte": "Oui",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 508.72,
+  "texte": "Échéance du projet :",
+  "gras": true,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 528.22,
+  "texte": "Sous 1 mois",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 564.82,
+  "texte": "Entreprise : MAISON LORETTE",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 584.32,
+  "texte": "Siret : 90579135700034",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 603.82,
+  "texte": "Activité : (Boulangerie-pâtisserie et",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 623.32,
+  "texte": "salon de thé, 4 boutiques en",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 642.82,
+  "texte": "centre-ville)",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 662.32,
+  "texte": "Contact :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 681.82,
+  "texte": "Adresse : 42 rue de la République",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 701.32,
+  "texte": "Ville : Aix-en-Provence",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 720.82,
+  "texte": "Code Postal : 13100",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 740.32,
+  "texte": "Tél :",
+  "gras": false,
+  "taille": 13.0
+ },
+ {
+  "page": 7,
+  "x": 1081.9,
+  "haut": 759.82,
+  "texte": "Mail :",
+  "gras": false,
+  "taille": 13.0
+ }
+]
